@@ -99,6 +99,26 @@ namespace EmployeeHrSystem.Services
                 .ToListAsync();
         }
 
+        // Get distinct dates with attendance records
+        public async Task<List<DateOnly>> GetDistinctAttendanceDatesAsync()
+        {
+            return await _context.Attendances
+                .Select(a => a.Date)
+                .Distinct()
+                .OrderByDescending(d => d)
+                .ToListAsync();
+        }
+
+        // Get attendance records for a specific date
+        public async Task<List<Attendance>> GetAttendanceByDateAsync(DateOnly date)
+        {
+            return await _context.Attendances
+                .Include(a => a.Employee)
+                .Where(a => a.Date == date)
+                .OrderBy(a => a.Employee!.Name)
+                .ToListAsync();
+        }
+
         // ===== NEW BULK ATTENDANCE METHODS =====
 
         public async Task<List<Employee>> GetAllEmployeesForAttendanceAsync()
@@ -151,6 +171,56 @@ namespace EmployeeHrSystem.Services
 
                 // Update monthly summaries for all marked employees
                 foreach (var employeeId in employeeIds)
+                {
+                    await UpdateMonthlyAttendanceSummaryAsync(employeeId, date);
+                }
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // New method: Mark bulk attendance with specific status for each employee
+        public async Task<bool> MarkBulkAttendanceAsync(DateOnly date, List<EmployeeAttendanceItem> employees)
+        {
+            try
+            {
+                // Remove any existing attendance for this date (delete all records for this date)
+                var existingAttendance = await _context.Attendances
+                    .Where(a => a.Date == date)
+                    .ToListAsync();
+
+                if (existingAttendance.Any())
+                {
+                    _context.Attendances.RemoveRange(existingAttendance);
+                    await _context.SaveChangesAsync();
+                }
+
+                // Add new attendance records for all employees with their selected status
+                foreach (var employee in employees)
+                {
+                    // Verify employee exists
+                    if (!await _context.Employees.AnyAsync(e => e.Id == employee.EmployeeId))
+                        continue;
+
+                    var attendance = new Attendance
+                    {
+                        EmployeeId = employee.EmployeeId,
+                        Date = date,
+                        Status = employee.Status // PRESENT or ABSENT
+                    };
+
+                    _context.Attendances.Add(attendance);
+                }
+
+                await _context.SaveChangesAsync();
+
+                // Update monthly summaries for all employees
+                var uniqueEmployeeIds = employees.Select(e => e.EmployeeId).Distinct();
+                foreach (var employeeId in uniqueEmployeeIds)
                 {
                     await UpdateMonthlyAttendanceSummaryAsync(employeeId, date);
                 }

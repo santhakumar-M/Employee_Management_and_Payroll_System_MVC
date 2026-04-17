@@ -15,11 +15,103 @@ namespace EmployeeHrSystem.Controllers
             _attendanceService = attendanceService;
         }
 
-        // GET: /Attendance
+        // GET: /Attendance - Show list of dates with attendance records
         public async Task<IActionResult> Index()
         {
-            var items = await _attendanceService.GetAllAttendanceAsync();
-            return View(items);
+            var dates = await _attendanceService.GetDistinctAttendanceDatesAsync();
+            return View(dates);
+        }
+
+        // GET: /Attendance/ViewByDate - Show attendance records for a specific date
+        public async Task<IActionResult> ViewByDate(DateOnly date)
+        {
+            // Get all employees
+            var allEmployees = await _attendanceService.GetAllEmployeesForAttendanceAsync();
+
+            // Get attendance for this specific date
+            var attendanceForDate = await _attendanceService.GetAttendanceForDateAsync(date);
+            var attendanceDict = attendanceForDate.ToDictionary(a => a.EmployeeId, a => a.Status);
+
+            // Create list of all employees with their attendance status
+            var employeesWithStatus = allEmployees.Select(e => new EmployeeAttendanceItem
+            {
+                EmployeeId = e.Id,
+                EmployeeName = e.Name,
+                Designation = e.Designation,
+                Status = attendanceDict.ContainsKey(e.Id) ? attendanceDict[e.Id] : "ABSENT"
+            }).OrderBy(x => x.EmployeeName).ToList();
+
+            ViewBag.SelectedDate = date;
+            return View(employeesWithStatus);
+        }
+
+        // GET: /Attendance/Mark - Individual Attendance Marking
+        [HttpGet]
+        public async Task<IActionResult> Mark(int? id = null)
+        {
+            if (id.HasValue)
+            {
+                // Edit existing attendance
+                var attendance = await _attendanceService.GetAttendanceByIdAsync(id.Value);
+                if (attendance == null)
+                    return NotFound();
+
+                var model = new Attendance
+                {
+                    AttendanceId = attendance.AttendanceId,
+                    EmployeeId = attendance.EmployeeId,
+                    Date = attendance.Date,
+                    Status = attendance.Status
+                };
+
+                await LoadEmployeeDropdownAsync();
+                return View(model);
+            }
+            else
+            {
+                // Create new attendance
+                await LoadEmployeeDropdownAsync();
+                return View(new Attendance { Date = DateOnly.FromDateTime(DateTime.Today) });
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Mark(Attendance attendance)
+        {
+            if (!ModelState.IsValid)
+            {
+                await LoadEmployeeDropdownAsync();
+                return View(attendance);
+            }
+
+            bool success;
+            if (attendance.AttendanceId == 0)
+            {
+                // New attendance record
+                success = await _attendanceService.MarkAttendanceAsync(attendance);
+                if (!success)
+                {
+                    ModelState.AddModelError("", "Error marking attendance. Please try again.");
+                    await LoadEmployeeDropdownAsync();
+                    return View(attendance);
+                }
+                TempData["Success"] = "Attendance marked successfully.";
+            }
+            else
+            {
+                // Update existing attendance record
+                success = await _attendanceService.UpdateAttendanceAsync(attendance);
+                if (!success)
+                {
+                    ModelState.AddModelError("", "Error updating attendance. Please try again.");
+                    await LoadEmployeeDropdownAsync();
+                    return View(attendance);
+                }
+                TempData["Success"] = "Attendance updated successfully.";
+            }
+
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: /Attendance/MarkForDay
@@ -34,12 +126,12 @@ namespace EmployeeHrSystem.Controllers
 
             // Get existing attendance for this date
             var attendanceForDate = await _attendanceService.GetAttendanceForDateAsync(date.Value);
-            var presentEmployeeIds = attendanceForDate
-                .Where(a => a.Status == "PRESENT")
-                .Select(a => a.EmployeeId)
-                .ToList();
+            // Use DistinctBy to handle potential duplicates - keep only one record per employee
+            var attendanceDict = attendanceForDate
+                .DistinctBy(a => a.EmployeeId)
+                .ToDictionary(a => a.EmployeeId, a => a.Status);
 
-            // Create ViewModel
+            // Create ViewModel with all employees and their attendance status
             var viewModel = new BulkAttendanceViewModel
             {
                 SelectedDate = date.Value,
@@ -48,7 +140,7 @@ namespace EmployeeHrSystem.Controllers
                     EmployeeId = e.Id,
                     EmployeeName = e.Name,
                     Designation = e.Designation,
-                    IsPresent = presentEmployeeIds.Contains(e.Id)
+                    Status = attendanceDict.ContainsKey(e.Id) ? attendanceDict[e.Id] : "ABSENT"
                 }).ToList()
             };
 
@@ -65,14 +157,8 @@ namespace EmployeeHrSystem.Controllers
                 return View(model);
             }
 
-            // Get list of selected employee IDs
-            var selectedEmployeeIds = model.Employees
-                .Where(e => e.IsPresent)
-                .Select(e => e.EmployeeId)
-                .ToList();
-
-            // Mark attendance for selected employees
-            var success = await _attendanceService.MarkMultipleAttendanceAsync(model.SelectedDate, selectedEmployeeIds);
+            // Mark attendance for all employees with their selected status
+            var success = await _attendanceService.MarkBulkAttendanceAsync(model.SelectedDate, model.Employees);
 
             if (!success)
             {
@@ -83,12 +169,12 @@ namespace EmployeeHrSystem.Controllers
                     EmployeeId = e.Id,
                     EmployeeName = e.Name,
                     Designation = e.Designation,
-                    IsPresent = selectedEmployeeIds.Contains(e.Id)
+                    Status = model.Employees.FirstOrDefault(x => x.EmployeeId == e.Id)?.Status ?? "ABSENT"
                 }).ToList();
                 return View(model);
             }
 
-            TempData["Success"] = $"Attendance marked successfully for {selectedEmployeeIds.Count} employee(s).";
+            TempData["Success"] = "Attendance marked successfully for all employees.";
             return RedirectToAction(nameof(Index));
         }
 
@@ -137,6 +223,25 @@ namespace EmployeeHrSystem.Controllers
             return View(viewModel);
         }
 
+        // POST: /Attendance/Delete
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var success = await _attendanceService.DeleteAttendanceAsync(id);
+
+            if (success)
+            {
+                TempData["Success"] = "Attendance record deleted successfully.";
+            }
+            else
+            {
+                TempData["Error"] = "Error deleting attendance record. Please try again.";
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
         // Helper method
         private string GetPreviousMonth(string currentMonth)
         {
@@ -147,29 +252,16 @@ namespace EmployeeHrSystem.Controllers
             }
             return currentMonth;
         }
-    }
 
-    // ===== VIEW MODELS =====
-
-    public class BulkAttendanceViewModel
-    {
-        public DateOnly SelectedDate { get; set; }
-        public List<EmployeeAttendanceItem> Employees { get; set; } = new();
-    }
-
-    public class EmployeeAttendanceItem
-    {
-        public int EmployeeId { get; set; }
-        public string EmployeeName { get; set; } = string.Empty;
-        public string? Designation { get; set; }
-        public bool IsPresent { get; set; }
-    }
-
-    public class EmployeeAttendanceReportViewModel
-    {
-        public MonthlyAttendanceSummary? Summary { get; set; }
-        public List<Attendance> AttendanceRecords { get; set; } = new();
-        public string CurrentMonth { get; set; } = string.Empty;
-        public string PreviousMonth { get; set; } = string.Empty;
+        private async Task LoadEmployeeDropdownAsync()
+        {
+            var employees = await _attendanceService.GetAllEmployeesForAttendanceAsync();
+            var items = employees.Select(e => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+            {
+                Value = e.Id.ToString(),
+                Text = e.Name
+            }).ToList();
+            ViewBag.EmployeeItems = items;
+        }
     }
 }

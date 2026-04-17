@@ -12,9 +12,14 @@ namespace EmployeeHrSystem.Services
         Task<List<Attendance>> GetAttendanceByDateRangeAsync(DateOnly startDate, DateOnly endDate);
         Task<List<Attendance>> GetEmployeeAttendanceAsync(int employeeId);
 
+        // Get distinct dates and attendance by date
+        Task<List<DateOnly>> GetDistinctAttendanceDatesAsync();
+        Task<List<Attendance>> GetAttendanceByDateAsync(DateOnly date);
+
         // New methods for bulk attendance marking
         Task<List<Employee>> GetAllEmployeesForAttendanceAsync();
         Task<bool> MarkMultipleAttendanceAsync(DateOnly date, List<int> employeeIds);
+        Task<bool> MarkBulkAttendanceAsync(DateOnly date, List<EmployeeAttendanceItem> employees);
         Task<MonthlyAttendanceSummary?> GetMonthlyAttendanceSummaryAsync(int employeeId, string month);
         Task<List<MonthlyAttendanceSummary>> GetAllMonthlyAttendanceSummariesAsync(string month);
         Task<bool> ResetMonthlyAttendanceAsync(string newMonth);

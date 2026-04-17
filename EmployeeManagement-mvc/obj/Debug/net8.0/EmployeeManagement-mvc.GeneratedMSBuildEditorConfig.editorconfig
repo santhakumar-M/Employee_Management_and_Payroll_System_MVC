@@ -11,145 +11,149 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EmployeeManagement_mvc
 build_property.RootNamespace = EmployeeManagement_mvc
-build_property.ProjectDir = C:\Users\2483409\source\repos\EmployeeManagement-mvc\EmployeeManagement-mvc\
+build_property.ProjectDir = C:\Jayasancith\Final EMS\EmployeeManagement-mvc\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\2483409\source\repos\EmployeeManagement-mvc\EmployeeManagement-mvc
+build_property.MSBuildProjectDirectory = C:\Jayasancith\Final EMS\EmployeeManagement-mvc
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Account/AccessDenied.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Account/Login.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Appraisal/Index.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Appraisal/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwcmFpc2FsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Appraisal/Update.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Appraisal/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwcmFpc2FsXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Attendance/EmployeeAttendanceReport.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Attendance/EmployeeAttendanceReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxFbXBsb3llZUF0dGVuZGFuY2VSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Attendance/Index.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Attendance/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Attendance/Mark.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Attendance/Mark.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxNYXJrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Attendance/MarkForDay.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Attendance/MarkForDay.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxNYXJrRm9yRGF5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Attendance/MonthlyReport.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Attendance/MonthlyReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxNb250aGx5UmVwb3J0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Dashboard/Admin.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Attendance/ViewByDate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxWaWV3QnlEYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Dashboard/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Dashboard/Employee.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Dashboard/Employee.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVtcGxveWVlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Dashboard/HR.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Dashboard/HR.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEhSLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Dashboard/Manager.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Dashboard/Manager.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXE1hbmFnZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Dashboard/Payroll.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Dashboard/Payroll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFBheXJvbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Department/Create.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Department/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Department/Index.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Department/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Employee/Create.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Employee/Delete.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Employee/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Employee/Edit.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Employee/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Employee/Index.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Home/Index.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Home/Privacy.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Leave/Apply.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Leave/Apply.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhdmVcQXBwbHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Leave/Index.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Leave/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhdmVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Payroll/Index.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Payroll/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Performance/Index.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Performance/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZm9ybWFuY2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Performance/Record.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Performance/Record.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZm9ybWFuY2VcUmVjb3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Report/HR.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Report/HR.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XEhSLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Shared/Error.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/_ViewImports.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/_ViewStart.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2483409/source/repos/EmployeeManagement-mvc/EmployeeManagement-mvc/Views/Shared/_Layout.cshtml]
+[C:/Jayasancith/Final EMS/EmployeeManagement-mvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-467fh5v58w

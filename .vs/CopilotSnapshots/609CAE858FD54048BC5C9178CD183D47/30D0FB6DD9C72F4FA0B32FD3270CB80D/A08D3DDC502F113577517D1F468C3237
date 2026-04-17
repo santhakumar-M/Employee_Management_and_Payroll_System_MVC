@@ -1,0 +1,25 @@
+﻿using EmployeeHrSystem.Models;
+
+namespace EmployeeHrSystem.Services
+{
+    public interface IAttendanceService
+    {
+        Task<List<Attendance>> GetAllAttendanceAsync();
+        Task<Attendance?> GetAttendanceByIdAsync(int id);
+        Task<bool> MarkAttendanceAsync(Attendance attendance);
+        Task<bool> UpdateAttendanceAsync(Attendance attendance);
+        Task<bool> DeleteAttendanceAsync(int id);
+        Task<List<Attendance>> GetAttendanceByDateRangeAsync(DateOnly startDate, DateOnly endDate);
+        Task<List<Attendance>> GetEmployeeAttendanceAsync(int employeeId);
+
+        // New methods for bulk attendance marking
+        Task<List<Employee>> GetAllEmployeesForAttendanceAsync();
+        Task<bool> MarkMultipleAttendanceAsync(DateOnly date, List<int> employeeIds);
+        Task<MonthlyAttendanceSummary?> GetMonthlyAttendanceSummaryAsync(int employeeId, string month);
+        Task<List<MonthlyAttendanceSummary>> GetAllMonthlyAttendanceSummariesAsync(string month);
+        Task<bool> ResetMonthlyAttendanceAsync(string newMonth);
+        Task<decimal> GetAttendancePercentageAsync(int employeeId, string month);
+        Task<List<Attendance>> GetAttendanceForDateAsync(DateOnly date);
+    }
+}
+

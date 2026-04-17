@@ -1,30 +1,94 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\",
+  "WorkspaceRootPath": "C:\\Jayasancith\\Final EMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\views\\attendance\\markforday.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\views\\attendance\\markforday.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\markforday.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\views\\attendance\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\views\\attendance\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\views\\attendance\\employeeattendancereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\views\\attendance\\employeeattendancereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\employeeattendancereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\views\\attendance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\views\\attendance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_FIXES_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_FIXES_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_QUICK_TEST_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_QUICK_TEST_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_CODE_CHANGES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_CODE_CHANGES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_FIX_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_FIX_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_SYSTEM_VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_SYSTEM_VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\views\\attendance\\viewbydate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\viewbydate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_CHANGES_COMPLETED.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_CHANGES_COMPLETED.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_TESTING_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_TESTING_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_IMPLEMENTATION_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_IMPLEMENTATION_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_SYSTEM_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_SYSTEM_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\jayasancith\\final ems\\employeemanagement-mvc\\models\\attendanceviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\attendanceviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Jayasancith\\Final EMS\\ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,78 +114,285 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
+              "RelativeToolTip": "ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T09:15:11.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AttendanceViewModels.cs",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T09:12:21.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ViewByDate.cshtml",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAABBwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-17T09:02:11.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\appsettings.json",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\appsettings.json",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\appsettings.json",
+              "RelativeToolTip": "EmployeeManagement-mvc\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-17T06:15:27.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IAttendanceService.cs",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAABQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T09:02:26.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ATTENDANCE_CHANGES_COMPLETED.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_CHANGES_COMPLETED.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_CHANGES_COMPLETED.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_CHANGES_COMPLETED.md",
+              "RelativeToolTip": "ATTENDANCE_CHANGES_COMPLETED.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T09:02:59.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ATTENDANCE_SYSTEM_ARCHITECTURE.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_SYSTEM_ARCHITECTURE.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_SYSTEM_ARCHITECTURE.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_SYSTEM_ARCHITECTURE.md",
+              "RelativeToolTip": "ATTENDANCE_SYSTEM_ARCHITECTURE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T09:05:08.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ATTENDANCE_QUICK_REFERENCE.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_QUICK_REFERENCE.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_QUICK_REFERENCE.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_QUICK_REFERENCE.md",
+              "RelativeToolTip": "ATTENDANCE_QUICK_REFERENCE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T09:04:31.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "QUICK_REFERENCE.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\QUICK_REFERENCE.md",
+              "RelativeDocumentMoniker": "QUICK_REFERENCE.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\QUICK_REFERENCE.md",
+              "RelativeToolTip": "QUICK_REFERENCE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T09:04:17.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
+              "RelativeToolTip": "ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T09:03:40.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ATTENDANCE_TESTING_GUIDE.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_TESTING_GUIDE.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_TESTING_GUIDE.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_TESTING_GUIDE.md",
+              "RelativeToolTip": "ATTENDANCE_TESTING_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T09:03:14.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ATTENDANCE_FIXES_COMPLETE.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_FIXES_COMPLETE.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_FIXES_COMPLETE.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_FIXES_COMPLETE.md",
+              "RelativeToolTip": "ATTENDANCE_FIXES_COMPLETE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T08:41:24.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ATTENDANCE_QUICK_TEST_GUIDE.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_QUICK_TEST_GUIDE.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_QUICK_TEST_GUIDE.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_QUICK_TEST_GUIDE.md",
+              "RelativeToolTip": "ATTENDANCE_QUICK_TEST_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T08:41:46.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ATTENDANCE_CODE_CHANGES.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_CODE_CHANGES.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_CODE_CHANGES.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_CODE_CHANGES.md",
+              "RelativeToolTip": "ATTENDANCE_CODE_CHANGES.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T08:42:09.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
+              "RelativeToolTip": "ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T08:43:23.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ATTENDANCE_FIX_SUMMARY.md",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_FIX_SUMMARY.md",
+              "RelativeDocumentMoniker": "ATTENDANCE_FIX_SUMMARY.md",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\ATTENDANCE_FIX_SUMMARY.md",
+              "RelativeToolTip": "ATTENDANCE_FIX_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-17T08:42:34.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MarkForDay.cshtml",
-              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
-              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAcwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-17T05:38:12.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Mark.cshtml",
-              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
-              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-17T05:38:06.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EmployeeAttendanceReport.cshtml",
-              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
-              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T05:37:37.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T05:37:37.757Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
-              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAABBwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-17T05:36:41.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AttendanceService.cs",
-              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\AttendanceService.cs",
-              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Services\\AttendanceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAL0AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-17T05:36:38.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AttendanceController.cs",
-              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
+              "DocumentMoniker": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
-              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
+              "ToolTip": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-17T05:36:34.077Z",
               "EditorCaption": ""

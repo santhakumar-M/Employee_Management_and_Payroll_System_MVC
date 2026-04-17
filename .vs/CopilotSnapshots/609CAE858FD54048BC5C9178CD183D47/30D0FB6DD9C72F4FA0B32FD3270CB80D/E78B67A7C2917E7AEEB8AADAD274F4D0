@@ -1,0 +1,85 @@
+﻿@model List<EmployeeHrSystem.Models.Attendance>
+
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>Attendance Records</h2>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-controller="Attendance" asp-action="Mark" class="btn btn-success me-2">
+                <i class="bi bi-plus-circle"></i> Mark Individual
+            </a>
+            <a asp-controller="Attendance" asp-action="MarkForDay" class="btn btn-primary">
+                <i class="bi bi-calendar"></i> Bulk Mark by Day
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle"></i> No attendance records found. 
+            <a asp-action="Mark">Mark attendance now</a>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th style="width: 5%">ID</th>
+                        <th style="width: 30%">Employee</th>
+                        <th style="width: 25%">Date</th>
+                        <th style="width: 20%">Status</th>
+                        <th style="width: 20%">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var a in Model)
+                    {
+                        var statusClass = a.Status == "PRESENT" ? "table-success" : 
+                                         a.Status == "ABSENT" ? "table-danger" : "table-warning";
+                        var badgeClass = a.Status == "PRESENT" ? "bg-success" : 
+                                        a.Status == "ABSENT" ? "bg-danger" : "bg-warning";
+                        <tr class="@statusClass">
+                            <td>@a.AttendanceId</td>
+                            <td>@a.Employee?.Name</td>
+                            <td>@a.Date.ToString("MMM dd, yyyy")</td>
+                            <td>
+                                <span class="badge @badgeClass">@a.Status</span>
+                            </td>
+                            <td>
+                                <a asp-action="Mark" asp-route-id="@a.AttendanceId" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-pencil"></i> Edit
+                                </a>
+                                <form asp-action="Delete" asp-route-id="@a.AttendanceId" method="post" style="display: inline;" 
+                                      onsubmit="return confirm('Are you sure you want to delete this attendance record?');">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">
+                                        <i class="bi bi-trash"></i> Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

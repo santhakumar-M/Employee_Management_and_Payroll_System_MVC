@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj": {}
+    "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj": {
+    "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj",
+        "projectUniqueName": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj",
         "projectName": "EmployeeManagement-mvc",
-        "projectPath": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj",
-        "packagesPath": "C:\\Users\\2483409\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\obj\\",
+        "projectPath": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj",
+        "packagesPath": "C:\\Users\\2483495\\.nuget\\packages\\",
+        "outputPath": "C:\\Jayasancith\\Final EMS\\EmployeeManagement-mvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\2483409\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\2483495\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

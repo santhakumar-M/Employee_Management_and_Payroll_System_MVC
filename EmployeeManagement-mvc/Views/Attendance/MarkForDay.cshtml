@@ -1,4 +1,4 @@
-@using EmployeeHrSystem.Controllers
+@using EmployeeHrSystem.Models
 @model BulkAttendanceViewModel
 @{
     ViewData["Title"] = "Mark Attendance for Day";
@@ -41,22 +41,19 @@
 
         <div class="row mb-4">
             <div class="col-12">
-                <h5>Select Employees to Mark Present</h5>
+                <h5>Mark Attendance for Employees</h5>
                 <hr />
             </div>
         </div>
 
         <div class="table-responsive">
-            <table class="table table-hover">
+            <table class="table table-hover table-bordered">
                 <thead class="table-light">
                     <tr>
-                        <th style="width: 5%">
-                            <input type="checkbox" id="selectAll" onchange="toggleAll(this)" title="Select All" />
-                        </th>
                         <th style="width: 30%">Employee Name</th>
                         <th style="width: 25%">Designation</th>
-                        <th style="width: 15%">Status</th>
-                        <th style="width: 25%">Action</th>
+                        <th style="width: 25%">Status</th>
+                        <th style="width: 20%">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,40 +62,38 @@
                         @for (int i = 0; i < Model.Employees.Count; i++)
                         {
                             var employee = Model.Employees[i];
-                            <tr class="@(employee.IsPresent ? "table-success" : "")" id="row_@i">
+                            var statusClass = employee.Status == "PRESENT" ? "table-success" : "table-danger";
+                            var badgeClass = employee.Status == "PRESENT" ? "bg-success" : "bg-danger";
+
+                            <tr class="@statusClass" id="row_@i">
                                 <td>
-                                    <input type="checkbox" 
-                                           id="checkbox_@i"
-                                           class="form-check-input employee-checkbox" 
-                                           name="Employees[@i].IsPresent" 
-                                           value="true" 
-                                           @(employee.IsPresent ? "checked" : "") 
-                                           onchange="updateRowStyle(this)" />
+                                    <strong>@employee.EmployeeName</strong>
                                     <input type="hidden" name="Employees[@i].EmployeeId" value="@employee.EmployeeId" />
                                     <input type="hidden" name="Employees[@i].EmployeeName" value="@employee.EmployeeName" />
                                     <input type="hidden" name="Employees[@i].Designation" value="@employee.Designation" />
                                 </td>
                                 <td>
-                                    <strong>@employee.EmployeeName</strong>
-                                </td>
-                                <td>
                                     @employee.Designation
                                 </td>
                                 <td>
-                                    @if (employee.IsPresent)
-                                    {
-                                        <span class="badge bg-success">Present</span>
-                                    }
-                                    else
-                                    {
-                                        <span class="badge bg-secondary">Not Marked</span>
-                                    }
+                                    <select class="form-select form-select-sm status-dropdown" 
+                                            name="Employees[@i].Status" 
+                                            id="status_@i"
+                                            onchange="updateRowStyle(@i)">
+                                        @if (employee.Status == "PRESENT")
+                                        {
+                                            <option value="PRESENT" selected>PRESENT</option>
+                                            <option value="ABSENT">ABSENT</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="PRESENT">PRESENT</option>
+                                            <option value="ABSENT" selected>ABSENT</option>
+                                        }
+                                    </select>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" 
-                                            onclick="toggleCheckbox(@i)">
-                                        @(employee.IsPresent ? "Unmark" : "Mark Present")
-                                    </button>
+                                    <span class="badge @badgeClass" id="badge_@i">@employee.Status</span>
                                 </td>
                             </tr>
                         }
@@ -106,7 +101,7 @@
                     else
                     {
                         <tr>
-                            <td colspan="5" class="text-center text-muted">No employees found</td>
+                            <td colspan="4" class="text-center text-muted">No employees found</td>
                         </tr>
                     }
                 </tbody>
@@ -131,65 +126,43 @@
         background-color: #d4edda !important;
     }
 
-    .form-check-input {
-        cursor: pointer;
-        width: 1.25em;
-        height: 1.25em;
+    .table-danger {
+        background-color: #f8d7da !important;
     }
 
-    .btn-outline-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .status-dropdown {
+        cursor: pointer;
+    }
+
+    .form-select-sm {
+        font-size: 0.875rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .badge {
+        font-size: 0.875rem;
+        padding: 0.35rem 0.65rem;
     }
 </style>
 
 <script>
-    function toggleAll(checkbox) {
-        const checkboxes = document.querySelectorAll('.employee-checkbox');
-        checkboxes.forEach(cb => {
-            cb.checked = checkbox.checked;
-            updateRowStyle(cb);
-        });
-        updateSelectAllCheckbox();
-    }
+    function updateRowStyle(index) {
+        const dropdown = document.getElementById('status_' + index);
+        const row = document.getElementById('row_' + index);
+        const badge = document.getElementById('badge_' + index);
+        const status = dropdown.value;
 
-    function toggleCheckbox(index) {
-        const checkbox = document.getElementById('checkbox_' + index);
-        if (checkbox) {
-            checkbox.checked = !checkbox.checked;
-            updateRowStyle(checkbox);
-            updateSelectAllCheckbox();
-        }
-    }
-
-    function updateRowStyle(checkbox) {
-        const row = checkbox.closest('tr');
-        if (checkbox.checked) {
+        // Update row background
+        row.classList.remove('table-success', 'table-danger');
+        if (status === 'PRESENT') {
             row.classList.add('table-success');
+            badge.className = 'badge bg-success';
         } else {
-            row.classList.remove('table-success');
+            row.classList.add('table-danger');
+            badge.className = 'badge bg-danger';
         }
-    }
 
-    function updateSelectAllCheckbox() {
-        const checkboxes = document.querySelectorAll('.employee-checkbox');
-        const selectAll = document.getElementById('selectAll');
-        if (selectAll && checkboxes.length > 0) {
-            const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-            const someChecked = Array.from(checkboxes).some(cb => cb.checked);
-            selectAll.checked = allChecked;
-            selectAll.indeterminate = someChecked && !allChecked;
-        }
+        // Update badge text
+        badge.textContent = status;
     }
-
-    // Set today's date as default and initialize
-    document.addEventListener('DOMContentLoaded', function () {
-        const dateInput = document.getElementById('selectedDate');
-        if (!dateInput.value) {
-            const today = new Date().toISOString().split('T')[0];
-            dateInput.value = today;
-        }
-        // Update select all checkbox state on page load
-        updateSelectAllCheckbox();
-    });
 </script>
