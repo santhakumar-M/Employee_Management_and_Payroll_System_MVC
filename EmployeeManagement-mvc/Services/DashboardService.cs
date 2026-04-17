@@ -1,0 +1,49 @@
+using EmployeeHrSystem.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace EmployeeHrSystem.Services
+{
+    public class DashboardService : IDashboardService
+    {
+        private readonly ApplicationContext _context;
+
+        public DashboardService(ApplicationContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<int> GetTotalEmployeesAsync()
+        {
+            return await _context.Employees.CountAsync();
+        }
+
+        public async Task<int> GetTotalDepartmentsAsync()
+        {
+            return await _context.Departments.CountAsync();
+        }
+
+        public async Task<decimal> GetAverageAttendanceAsync()
+        {
+            var attendances = await _context.Attendances.ToListAsync();
+            if (attendances.Count == 0) return 0;
+
+            var presentCount = attendances.Count(a => a.Status == "PRESENT");
+            return (decimal)presentCount / attendances.Count * 100;
+        }
+
+        public async Task<int> GetPendingLeaveRequestsAsync()
+        {
+            return await _context.LeaveRequests
+                .CountAsync(r => r.Status == "APPLIED");
+        }
+
+        public async Task<decimal> GetTotalPayrollAmountAsync(string month)
+        {
+            var payrolls = await _context.Payrolls
+                .Where(p => p.Month == month)
+                .ToListAsync();
+
+            return payrolls.Sum(p => p.NetSalary);
+        }
+    }
+}

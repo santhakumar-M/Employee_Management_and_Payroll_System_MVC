@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\data\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\data\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\models\\monthlyattendancesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\monthlyattendancesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\models\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\views\\attendance\\markforday.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\markforday.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\users\\2483409\\source\\repos\\employeemanagement-mvc\\employeemanagement-mvc\\views\\attendance\\monthlyreport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\monthlyreport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MonthlyReport.cshtml",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\MonthlyReport.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\MonthlyReport.cshtml",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\MonthlyReport.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\MonthlyReport.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAABBwJgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-17T04:28:59.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MarkForDay.cshtml",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
+              "ViewState": "AgIAAJgAAAAAAAAAAABBwMMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-17T04:28:44.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AttendanceController.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T04:26:37.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAEBUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T04:26:00.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Models\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\ApplicationContext.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Models\\ApplicationContext.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\ApplicationContext.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAABYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T04:25:51.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MonthlyAttendanceSummary.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Models\\MonthlyAttendanceSummary.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\MonthlyAttendanceSummary.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Models\\MonthlyAttendanceSummary.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\MonthlyAttendanceSummary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T04:25:38.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\AttendanceService.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Services\\AttendanceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T04:19:58.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Services\\ReportService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\ReportService.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Services\\ReportService.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Services\\ReportService.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T04:19:03.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportController.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Controllers\\ReportController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\ReportController.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Controllers\\ReportController.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\ReportController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T04:18:34.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DesignTimeDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Data\\DesignTimeDbContextFactory.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Data\\DesignTimeDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Data\\DesignTimeDbContextFactory.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Data\\DesignTimeDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T05:43:29.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Data\\DbInitializer.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T05:43:17.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Program.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Program.cs",
+              "ToolTip": "C:\\Users\\2483409\\source\\repos\\EmployeeManagement-mvc\\EmployeeManagement-mvc\\Program.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T04:46:58.748Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

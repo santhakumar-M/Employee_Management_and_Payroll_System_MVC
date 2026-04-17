@@ -1,0 +1,85 @@
+using EmployeeHrSystem.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace EmployeeHrSystem.Controllers
+{
+    [Authorize]
+    public class DashboardController : Controller
+    {
+        private readonly IDashboardService _dashboardService;
+
+        public DashboardController(IDashboardService dashboardService)
+        {
+            _dashboardService = dashboardService;
+        }
+
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Admin()
+        {
+            var totalEmployees = await _dashboardService.GetTotalEmployeesAsync();
+            var totalDepartments = await _dashboardService.GetTotalDepartmentsAsync();
+            var averageAttendance = await _dashboardService.GetAverageAttendanceAsync();
+            var pendingLeaves = await _dashboardService.GetPendingLeaveRequestsAsync();
+
+            ViewBag.TotalEmployees = totalEmployees;
+            ViewBag.TotalDepartments = totalDepartments;
+            ViewBag.AverageAttendance = averageAttendance;
+            ViewBag.PendingLeaves = pendingLeaves;
+
+            return View();
+        }
+
+        [Authorize(Roles = "Admin,HR Officer")]
+        public async Task<IActionResult> HR()
+        {
+            var totalEmployees = await _dashboardService.GetTotalEmployeesAsync();
+            var totalDepartments = await _dashboardService.GetTotalDepartmentsAsync();
+            var averageAttendance = await _dashboardService.GetAverageAttendanceAsync();
+            var pendingLeaves = await _dashboardService.GetPendingLeaveRequestsAsync();
+
+            ViewBag.TotalEmployees = totalEmployees;
+            ViewBag.TotalDepartments = totalDepartments;
+            ViewBag.AverageAttendance = averageAttendance;
+            ViewBag.PendingLeaves = pendingLeaves;
+
+            return View();
+        }
+
+        [Authorize(Roles = "Admin,Payroll Officer")]
+        public async Task<IActionResult> Payroll()
+        {
+            var currentMonth = DateTime.Now.ToString("yyyy-MM");
+            var totalPayroll = await _dashboardService.GetTotalPayrollAmountAsync(currentMonth);
+
+            ViewBag.TotalPayroll = totalPayroll;
+            ViewBag.CurrentMonth = currentMonth;
+
+            return View();
+        }
+
+        [Authorize(Roles = "Admin,Manager")]
+        public async Task<IActionResult> Manager()
+        {
+            var totalEmployees = await _dashboardService.GetTotalEmployeesAsync();
+            var averageAttendance = await _dashboardService.GetAverageAttendanceAsync();
+            var pendingLeaves = await _dashboardService.GetPendingLeaveRequestsAsync();
+
+            ViewBag.TotalEmployees = totalEmployees;
+            ViewBag.AverageAttendance = averageAttendance;
+            ViewBag.PendingLeaves = pendingLeaves;
+
+            return View();
+        }
+
+        [Authorize(Roles = "Admin,Employee")]
+        public async Task<IActionResult> Employee()
+        {
+            var averageAttendance = await _dashboardService.GetAverageAttendanceAsync();
+
+            ViewBag.AverageAttendance = averageAttendance;
+
+            return View();
+        }
+    }
+}

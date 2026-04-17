@@ -1,0 +1,152 @@
+@model List<MonthlyAttendanceSummary>
+@{
+    ViewData["Title"] = "Monthly Attendance Report";
+    var currentMonth = ViewBag.CurrentMonth as string ?? DateTime.Now.ToString("yyyy-MM");
+}
+
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>Monthly Attendance Report</h2>
+            <p class="text-muted">Month: <strong>@DateTime.ParseExact(currentMonth + "-01", "yyyy-MM-dd", null).ToString("MMMM yyyy")</strong></p>
+        </div>
+        <div class="col-md-4 text-end">
+            <a href="@Url.Action("MarkForDay")" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Mark Attendance
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Attendance Summary for @DateTime.ParseExact(currentMonth + "-01", "yyyy-MM-dd", null).ToString("MMMM yyyy")</h5>
+        </div>
+
+        @if (Model == null || Model.Count == 0)
+        {
+            <div class="alert alert-info m-4">
+                <i class="bi bi-info-circle"></i> No attendance records found for this month.
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th style="width: 25%">Employee Name</th>
+                            <th style="width: 15%" class="text-center">Days Present</th>
+                            <th style="width: 15%" class="text-center">Working Days</th>
+                            <th style="width: 20%" class="text-center">Attendance %</th>
+                            <th style="width: 25%">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var summary in Model.Where(x => x.Employee != null).OrderBy(x => x.Employee!.Name))
+                        {
+                            var attendancePercentage = summary.AttendancePercentage;
+                            var statusClass = attendancePercentage >= 80 ? "success" :
+                                            attendancePercentage >= 70 ? "warning" : "danger";
+                            var statusText = attendancePercentage >= 80 ? "Excellent" :
+                                           attendancePercentage >= 70 ? "Good" : "Below Target";
+
+                            <tr>
+                                <td>
+                                    <strong>@summary.Employee?.Name</strong>
+                                    @if (!string.IsNullOrEmpty(summary.Employee?.Designation))
+                                    {
+                                        <br />
+                                        <small class="text-muted">@summary.Employee.Designation</small>
+                                    }
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge bg-info">@summary.DaysPresent</span>
+                                </td>
+                                <td class="text-center">
+                                    @summary.TotalWorkingDays
+                                </td>
+                                <td class="text-center">
+                                    <div class="progress" style="height: 24px;">
+                                        <div class="progress-bar bg-@statusClass" role="progressbar" 
+                                             style="width: @attendancePercentage%" 
+                                             aria-valuenow="@attendancePercentage" 
+                                             aria-valuemin="0" 
+                                             aria-valuemax="100">
+                                            @attendancePercentage.ToString("F1")%
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="badge bg-@statusClass">@statusText</span>
+                                    <br />
+                                    <small class="text-muted">
+                                        @if (attendancePercentage >= 80)
+                                        {
+                                            <span><i class="bi bi-check-circle text-success"></i> Good attendance</span>
+                                        }
+                                        else if (attendancePercentage >= 70)
+                                        {
+                                            <span><i class="bi bi-exclamation-circle text-warning"></i> Needs improvement</span>
+                                        }
+                                        else
+                                        {
+                                            <span><i class="bi bi-x-circle text-danger"></i> Poor attendance</span>
+                                        }
+                                    </small>
+                                    <br />
+                                    <a href="@Url.Action("EmployeeAttendanceReport", new { employeeId = summary.EmployeeId, month = currentMonth })" 
+                                       class="btn btn-sm btn-outline-secondary mt-2">
+                                        View Details
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-footer bg-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Summary Statistics</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Total Employees:</strong> @Model.Count</li>
+                            <li><strong>Average Attendance:</strong> @(Model.Count > 0 ? Model.Average(x => x.AttendancePercentage).ToString("F1") : "0")%</li>
+                            <li><strong>Excellent (≥80%):</strong> @(Model.Count(x => x.AttendancePercentage >= 80)) employees</li>
+                            <li><strong>Good (70-79%):</strong> @(Model.Count(x => x.AttendancePercentage >= 70 && x.AttendancePercentage < 80)) employees</li>
+                            <li><strong>Below Target (&lt;70%):</strong> @(Model.Count(x => x.AttendancePercentage < 70)) employees</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Quick Actions</h6>
+                        <a href="@Url.Action("Index")" class="btn btn-sm btn-outline-primary me-2">
+                            <i class="bi bi-list"></i> View All Records
+                        </a>
+                        <a href="@Url.Action("MarkForDay")" class="btn btn-sm btn-outline-success">
+                            <i class="bi bi-check-lg"></i> Mark Today's Attendance
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .progress {
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+</style>

@@ -1,0 +1,128 @@
+using EmployeeHrSystem.Models;
+using EmployeeHrSystem.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Security.Claims;
+
+namespace EmployeeHrSystem.Controllers
+{
+    [Authorize(Roles = "Admin,HR Officer,Manager,Employee")]
+    public class LeaveController : Controller
+    {
+        private readonly ILeaveService _leaveService;
+        private readonly IEmployeeService _employeeService;
+
+        public LeaveController(ILeaveService leaveService, IEmployeeService employeeService)
+        {
+            _leaveService = leaveService;
+            _employeeService = employeeService;
+        }
+
+        // GET: /Leave
+        public async Task<IActionResult> Index()
+        {
+            List<LeaveRequest> list;
+
+            if (User.IsInRole("Employee"))
+            {
+                var empIdStr = User.FindFirstValue("EmployeeId");
+                if (int.TryParse(empIdStr, out int empId))
+                {
+                    list = await _leaveService.GetEmployeeLeaveRequestsAsync(empId);
+                }
+                else
+                {
+                    list = new List<LeaveRequest>();
+                }
+            }
+            else
+            {
+                list = await _leaveService.GetAllLeaveRequestsAsync();
+            }
+
+            return View(list);
+        }
+
+        // GET: /Leave/Apply
+        [HttpGet]
+        public async Task<IActionResult> Apply()
+        {
+            int? selectedId = null;
+            if (User.IsInRole("Employee"))
+            {
+                var empIdStr = User.FindFirstValue("EmployeeId");
+                if (int.TryParse(empIdStr, out int empId))
+                {
+                    selectedId = empId;
+                }
+            }
+
+            await LoadEmployeesForDropdownAsync(selectedId);
+            return View();
+        }
+
+        // POST: /Leave/Apply
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Apply(LeaveRequest r)
+        {
+            if (User.IsInRole("Employee"))
+            {
+                var empIdStr = User.FindFirstValue("EmployeeId");
+                if (int.TryParse(empIdStr, out int empId))
+                {
+                    r.EmployeeId = empId;
+                }
+                r.Status = "APPLIED"; // Enforce status for employee
+            }
+
+            if (!ModelState.IsValid)
+            {
+                await LoadEmployeesForDropdownAsync(r.EmployeeId);
+                return View(r);
+            }
+
+            var success = await _leaveService.ApplyLeaveAsync(r);
+            if (!success)
+            {
+                ModelState.AddModelError("", "Error applying for leave. Please check the data.");
+                await LoadEmployeesForDropdownAsync(r.EmployeeId);
+                return View(r);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [Authorize(Roles = "Admin,HR Officer,Manager")]
+        public async Task<IActionResult> Approve(int id)
+        {
+            var success = await _leaveService.UpdateLeaveStatusAsync(id, "APPROVED");
+            if (!success)
+            {
+                TempData["Error"] = "Error approving leave request.";
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        [Authorize(Roles = "Admin,HR Officer,Manager")]
+        public async Task<IActionResult> Reject(int id)
+        {
+            var success = await _leaveService.UpdateLeaveStatusAsync(id, "REJECTED");
+            if (!success)
+            {
+                TempData["Error"] = "Error rejecting leave request.";
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        /// <summary>
+        /// Populates ViewBag.EmployeeItems with a Name-only dropdown (value = Id).
+        /// </summary>
+        private async Task LoadEmployeesForDropdownAsync(int? selectedId = null)
+        {
+            var items = await _employeeService.GetAllEmployeesAsync();
+            ViewBag.EmployeeItems = new SelectList(items, "Id", "Name", selectedId);
+        }
+    }
+}

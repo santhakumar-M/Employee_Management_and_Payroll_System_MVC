@@ -1,0 +1,15 @@
+﻿using EmployeeHrSystem.Models;
+
+namespace EmployeeHrSystem.Services
+{
+    public interface IAttendanceService
+    {
+        Task<List<Attendance>> GetAllAttendanceAsync();
+        Task<Attendance?> GetAttendanceByIdAsync(int id);
+        Task<bool> MarkAttendanceAsync(Attendance attendance);
+        Task<bool> UpdateAttendanceAsync(Attendance attendance);
+        Task<bool> DeleteAttendanceAsync(int id);
+        Task<List<Attendance>> GetAttendanceByDateRangeAsync(DateOnly startDate, DateOnly endDate);
+        Task<List<Attendance>> GetEmployeeAttendanceAsync(int employeeId);
+    }
+}

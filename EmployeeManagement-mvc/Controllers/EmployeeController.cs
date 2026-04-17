@@ -1,0 +1,119 @@
+using EmployeeHrSystem.Models;
+using EmployeeHrSystem.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace EmployeeHrSystem.Controllers
+{
+    [Authorize(Roles = "Admin,HR Officer")]
+    public class EmployeeController : Controller
+    {
+        private readonly IEmployeeService _employeeService;
+        private readonly IDepartmentService _departmentService;
+
+        public EmployeeController(IEmployeeService employeeService, IDepartmentService departmentService)
+        {
+            _employeeService = employeeService;
+            _departmentService = departmentService;
+        }
+
+        // GET: /Employee
+        public async Task<IActionResult> Index()
+        {
+            var list = await _employeeService.GetAllEmployeesAsync();
+            return View(list);
+        }
+
+        // GET: /Employee/Create
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            var departments = await _departmentService.GetAllDepartmentsAsync();
+            ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
+            return View();
+        }
+
+        // POST: /Employee/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Employee employee)
+        {
+            if (!ModelState.IsValid)
+            {
+                var departments = await _departmentService.GetAllDepartmentsAsync();
+                ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
+                return View(employee);
+            }
+
+            var result = await _employeeService.CreateEmployeeAsync(employee);
+            if (!result)
+            {
+                ModelState.AddModelError("", "Error creating employee.");
+                var departments = await _departmentService.GetAllDepartmentsAsync();
+                ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
+                return View(employee);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: /Employee/Edit/5
+        public async Task<IActionResult> Edit(int id)
+        {
+            var e = await _employeeService.GetEmployeeByIdAsync(id);
+            if (e == null) return NotFound();
+
+            var departments = await _departmentService.GetAllDepartmentsAsync();
+            ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName", e.DepartmentId);
+            return View(e);
+        }
+
+        // POST: /Employee/Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Employee e)
+        {
+            if (!ModelState.IsValid)
+            {
+                var departments = await _departmentService.GetAllDepartmentsAsync();
+                ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName", e.DepartmentId);
+                return View(e);
+            }
+
+            var result = await _employeeService.UpdateEmployeeAsync(e);
+            if (!result)
+            {
+                ModelState.AddModelError("", "Error updating employee.");
+                var departments = await _departmentService.GetAllDepartmentsAsync();
+                ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName", e.DepartmentId);
+                return View(e);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: /Employee/Delete/5
+        public async Task<IActionResult> Delete(int id)
+        {
+            var e = await _employeeService.GetEmployeeByIdAsync(id);
+            if (e == null) return NotFound();
+            return View(e);
+        }
+
+        // POST: /Employee/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var result = await _employeeService.DeleteEmployeeAsync(id);
+            if (!result)
+            {
+                TempData["Error"] = "Error deleting employee.";
+                return RedirectToAction(nameof(Index));
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

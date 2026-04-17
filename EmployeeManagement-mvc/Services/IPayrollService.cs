@@ -1,0 +1,16 @@
+using EmployeeHrSystem.Models;
+
+namespace EmployeeHrSystem.Services
+{
+    public interface IPayrollService
+    {
+        Task<List<Payroll>> GetAllPayrollsAsync();
+        Task<Payroll?> GetPayrollByIdAsync(int id);
+        Task<List<Payroll>> GetEmployeePayrollsAsync(int employeeId);
+        Task<bool> ProcessPayrollAsync(Payroll payroll);
+        Task<bool> UpdatePayrollAsync(Payroll payroll);
+        Task<bool> DeletePayrollAsync(int id);
+        Task<List<Payroll>> GetPayrollsByMonthAsync(string month);
+        Task<bool> UpdatePaymentStatusAsync(int payrollId, string status);
+    }
+}

@@ -1,0 +1,11 @@
+namespace EmployeeHrSystem.Services
+{
+    public interface IDashboardService
+    {
+        Task<int> GetTotalEmployeesAsync();
+        Task<int> GetTotalDepartmentsAsync();
+        Task<decimal> GetAverageAttendanceAsync();
+        Task<int> GetPendingLeaveRequestsAsync();
+        Task<decimal> GetTotalPayrollAmountAsync(string month);
+    }
+}

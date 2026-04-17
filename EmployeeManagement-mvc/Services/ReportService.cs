@@ -1,0 +1,102 @@
+using EmployeeHrSystem.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace EmployeeHrSystem.Services
+{
+    public class ReportService : IReportService
+    {
+        private readonly ApplicationContext _context;
+
+        public ReportService(ApplicationContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<List<HRReport>> GetAllReportsAsync()
+        {
+            return await _context.HRReports
+                .OrderByDescending(r => r.ReportDate)
+                .ToListAsync();
+        }
+
+        public async Task<HRReport?> GetReportByIdAsync(int id)
+        {
+            return await _context.HRReports.FindAsync(id);
+        }
+
+        public async Task<bool> CreateReportAsync(HRReport report)
+        {
+            try
+            {
+                _context.HRReports.Add(report);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateReportAsync(HRReport report)
+        {
+            try
+            {
+                _context.Entry(report).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteReportAsync(int id)
+        {
+            try
+            {
+                var report = await _context.HRReports.FindAsync(id);
+                if (report == null) return false;
+
+                _context.HRReports.Remove(report);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<HRReport> GenerateMonthlyReportAsync(DateOnly reportDate)
+        {
+            var totalEmployees = await _context.Employees.CountAsync();
+            
+            // Calculate average attendance for the month
+            var attendanceRecords = await _context.Attendances
+                .Where(a => a.Date.Year == reportDate.Year && a.Date.Month == reportDate.Month)
+                .ToListAsync();
+
+            var averageAttendance = attendanceRecords.Count > 0
+                ? (decimal)attendanceRecords.Count(a => a.Status == "PRESENT") / attendanceRecords.Count * 100
+                : 0;
+
+            // Get payroll summary
+            var payrollSummary = $"Payroll records for {reportDate.Year}-{reportDate.Month:D2}";
+
+            var report = new HRReport
+            {
+                ReportDate = reportDate,
+                TotalEmployees = totalEmployees,
+                AverageAttendance = averageAttendance,
+                PayrollSummary = payrollSummary
+            };
+
+            _context.HRReports.Add(report);
+            await _context.SaveChangesAsync();
+
+            return report;
+        }
+    }
+}

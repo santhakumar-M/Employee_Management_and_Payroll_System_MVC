@@ -1,0 +1,61 @@
+﻿using EmployeeHrSystem.Models;
+using EmployeeHrSystem.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace EmployeeHrSystem.Controllers
+{
+    [Authorize(Roles = "Admin,HR Officer,Manager")]
+    public class AttendanceController : Controller
+    {
+        private readonly IAttendanceService _attendanceService;
+        private readonly IEmployeeService _employeeService;
+
+        public AttendanceController(IAttendanceService attendanceService, IEmployeeService employeeService)
+        {
+            _attendanceService = attendanceService;
+            _employeeService = employeeService;
+        }
+
+        // GET: /Attendance
+        public async Task<IActionResult> Index()
+        {
+            var items = await _attendanceService.GetAllAttendanceAsync();
+            return View(items);
+        }
+
+        // GET: /Attendance/Mark
+        [HttpGet]
+        public async Task<IActionResult> Mark()
+        {
+            var employees = await _employeeService.GetAllEmployeesAsync();
+            ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+            return View();
+        }
+
+        // POST: /Attendance/Mark
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Mark(Attendance a)
+        {
+            if (!ModelState.IsValid)
+            {
+                var employees = await _employeeService.GetAllEmployeesAsync();
+                ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+                return View(a);
+            }
+
+            var success = await _attendanceService.MarkAttendanceAsync(a);
+            if (!success)
+            {
+                ModelState.AddModelError("", "Error marking attendance. Employee may not exist.");
+                var employees = await _employeeService.GetAllEmployeesAsync();
+                ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+                return View(a);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}
