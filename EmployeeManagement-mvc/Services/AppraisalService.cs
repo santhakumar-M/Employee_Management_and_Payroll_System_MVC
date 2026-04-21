@@ -44,7 +44,17 @@ namespace EmployeeHrSystem.Services
                 if (!await _context.Employees.AnyAsync(e => e.Id == appraisal.EmployeeId))
                     return false;
 
+                // Add appraisal record
                 _context.Appraisals.Add(appraisal);
+
+                // Update employee basic salary to the new salary from appraisal
+                var employee = await _context.Employees.FindAsync(appraisal.EmployeeId);
+                if (employee != null)
+                {
+                    employee.BasicSalary = appraisal.NewSalary;
+                    _context.Entry(employee).State = EntityState.Modified;
+                }
+
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -58,7 +68,17 @@ namespace EmployeeHrSystem.Services
         {
             try
             {
+                // Update appraisal record
                 _context.Entry(appraisal).State = EntityState.Modified;
+
+                // Also update employee salary if NewSalary changed
+                var employee = await _context.Employees.FindAsync(appraisal.EmployeeId);
+                if (employee != null)
+                {
+                    employee.BasicSalary = appraisal.NewSalary;
+                    _context.Entry(employee).State = EntityState.Modified;
+                }
+
                 await _context.SaveChangesAsync();
                 return true;
             }

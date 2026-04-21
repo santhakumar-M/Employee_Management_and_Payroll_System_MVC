@@ -36,7 +36,7 @@ namespace EmployeeHrSystem.Services
                 .ToListAsync();
         }
 
-        public async Task<bool> ProcessPayrollAsync(Payroll payroll)
+        public async Task<bool> ProcessPayrollAsync(Payroll payroll, bool applyLeaveDeduction = false, decimal perDayDeduction = 0m)
         {
             try
             {
@@ -48,10 +48,75 @@ namespace EmployeeHrSystem.Services
                 if (payroll.BasicSalary == 0)
                     payroll.BasicSalary = employee.BasicSalary ?? 0;
 
+                // Apply leave-based deduction if requested
+                if (applyLeaveDeduction)
+                {
+                    // Calculate unpaid leave days based on attendance records.
+                    // Count distinct dates in the month where the employee was marked ABSENT.
+                    var monthKey = payroll.Month; // expected YYYY-MM
+                    int unpaidLeaveDays = 0;
+
+                    int totalWorkingDays = 0;
+
+                    var monthParts = monthKey.Split('-');
+                    if (monthParts.Length == 2 && int.TryParse(monthParts[0], out var y) && int.TryParse(monthParts[1], out var m))
+                    {
+                        var att = await _context.Attendances
+                            .Where(a => a.EmployeeId == payroll.EmployeeId && a.Date.Year == y && a.Date.Month == m)
+                            .ToListAsync();
+
+                        if (att.Any())
+                        {
+                            // Group by date and count days where any record is ABSENT
+                            unpaidLeaveDays = att
+                                .GroupBy(a => a.Date)
+                                .Count(g => g.Any(x => x.Status != null && x.Status.ToUpper() == "ABSENT"));
+                        }
+                        else
+                        {
+                            // No attendance records for this employee/month -> do not apply deduction
+                            unpaidLeaveDays = 0;
+                        }
+
+                        // compute total working days for the month (Mon-Fri)
+                        totalWorkingDays = GetWorkingDaysInMonth(y, m);
+                    }
+
+                    // Always compute per-day deduction from salary / working days when applyLeaveDeduction is used
+                    perDayDeduction = totalWorkingDays > 0 ? payroll.BasicSalary / (decimal)totalWorkingDays : 0m;
+
+                    var leaveDeduction = unpaidLeaveDays * perDayDeduction;
+                    payroll.LeaveDeduction = leaveDeduction;
+                    payroll.UnpaidDays = unpaidLeaveDays;
+                    payroll.PerDayDeduction = perDayDeduction;
+
+                    // keep existing other deductions and add leaveDeduction
+                    payroll.Deductions += leaveDeduction;
+                }
+
                 // Calculate net salary
                 payroll.NetSalary = payroll.BasicSalary - payroll.Deductions;
 
-                _context.Payrolls.Add(payroll);
+                // Prevent duplicate payroll entries for same employee & month
+                var existing = await _context.Payrolls.FirstOrDefaultAsync(p => p.EmployeeId == payroll.EmployeeId && p.Month == payroll.Month);
+                if (existing != null)
+                {
+                    // Update existing record
+                    existing.BasicSalary = payroll.BasicSalary;
+                    existing.Deductions = payroll.Deductions;
+                    existing.NetSalary = payroll.NetSalary;
+                    existing.PaymentStatus = payroll.PaymentStatus;
+                    // update leave-related fields so UI shows correct unpaid days / per-day / leave deduction
+                    existing.UnpaidDays = payroll.UnpaidDays;
+                    existing.PerDayDeduction = payroll.PerDayDeduction;
+                    existing.LeaveDeduction = payroll.LeaveDeduction;
+                    _context.Entry(existing).State = EntityState.Modified;
+                }
+                else
+                {
+                    _context.Payrolls.Add(payroll);
+                }
+
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -60,6 +125,20 @@ namespace EmployeeHrSystem.Services
                 return false;
             }
         }
+
+// Helper used by payroll deduction logic
+static int GetWorkingDaysInMonth(int year, int month)
+{
+    int daysInMonth = DateTime.DaysInMonth(year, month);
+    int workingDays = 0;
+    for (int day = 1; day <= daysInMonth; day++)
+    {
+        var dow = new DateOnly(year, month, day).DayOfWeek;
+        if (dow != DayOfWeek.Saturday && dow != DayOfWeek.Sunday)
+            workingDays++;
+    }
+    return workingDays;
+}
 
         public async Task<bool> UpdatePayrollAsync(Payroll payroll)
         {

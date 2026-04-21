@@ -9,6 +9,6 @@ namespace EmployeeHrSystem.Services
         Task<bool> CreateReportAsync(HRReport report);
         Task<bool> UpdateReportAsync(HRReport report);
         Task<bool> DeleteReportAsync(int id);
-        Task<HRReport> GenerateMonthlyReportAsync(DateOnly reportDate);
+        Task<HRReportViewModel> GenerateMonthlyReportAsync(DateOnly reportDate);
     }
 }

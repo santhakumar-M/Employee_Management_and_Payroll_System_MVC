@@ -7,7 +7,7 @@ namespace EmployeeHrSystem.Services
         Task<List<Payroll>> GetAllPayrollsAsync();
         Task<Payroll?> GetPayrollByIdAsync(int id);
         Task<List<Payroll>> GetEmployeePayrollsAsync(int employeeId);
-        Task<bool> ProcessPayrollAsync(Payroll payroll);
+        Task<bool> ProcessPayrollAsync(Payroll payroll, bool applyLeaveDeduction = false, decimal perDayDeduction = 0m); // Updated method signature
         Task<bool> UpdatePayrollAsync(Payroll payroll);
         Task<bool> DeletePayrollAsync(int id);
         Task<List<Payroll>> GetPayrollsByMonthAsync(string month);

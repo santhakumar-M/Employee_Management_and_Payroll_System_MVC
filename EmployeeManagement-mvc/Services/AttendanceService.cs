@@ -285,6 +285,14 @@ namespace EmployeeHrSystem.Services
                 .FirstOrDefaultAsync(m => m.EmployeeId == employeeId && m.Month == month);
         }
 
+        public async Task<List<MonthlyAttendanceSummary>> GetSummariesForEmployeeAsync(int employeeId)
+        {
+            return await _context.MonthlyAttendanceSummaries
+                .Where(m => m.EmployeeId == employeeId)
+                .OrderByDescending(m => m.Month)
+                .ToListAsync();
+        }
+
         public async Task<List<MonthlyAttendanceSummary>> GetAllMonthlyAttendanceSummariesAsync(string month)
         {
             return await _context.MonthlyAttendanceSummaries

@@ -20,3 +20,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* Card utilities */
+.card-custom { border-radius: 12px; box-shadow: 0 10px 30px rgba(15,23,42,.06); border: none; }
+.text-accent { color: #4f46e5; }
+
+/* Table improvements */
+table.table { border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 8px; }
+table.table thead th { background: #f3f4f6; font-weight: 700; }
+
+/* Simple responsive helpers */
+.mb-1-5 { margin-bottom: .9rem; }
+.muted { color: #6b7280; }

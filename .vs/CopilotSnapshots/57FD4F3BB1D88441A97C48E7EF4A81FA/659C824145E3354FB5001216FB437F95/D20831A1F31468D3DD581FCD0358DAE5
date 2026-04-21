@@ -1,0 +1,97 @@
+﻿using EmployeeHrSystem.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace EmployeeHrSystem.Services
+{
+    public class AppraisalService : IAppraisalService
+    {
+        private readonly ApplicationContext _context;
+
+        public AppraisalService(ApplicationContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<List<Appraisal>> GetAllAppraisalsAsync()
+        {
+            return await _context.Appraisals
+                .Include(a => a.Employee)
+                .OrderByDescending(a => a.AppraisalDate)
+                .ToListAsync();
+        }
+
+        public async Task<Appraisal?> GetAppraisalByIdAsync(int id)
+        {
+            return await _context.Appraisals
+                .Include(a => a.Employee)
+                .FirstOrDefaultAsync(a => a.AppraisalId == id);
+        }
+
+        public async Task<List<Appraisal>> GetEmployeeAppraisalsAsync(int employeeId)
+        {
+            return await _context.Appraisals
+                .Include(a => a.Employee)
+                .Where(a => a.EmployeeId == employeeId)
+                .OrderByDescending(a => a.AppraisalDate)
+                .ToListAsync();
+        }
+
+        public async Task<bool> CreateAppraisalAsync(Appraisal appraisal)
+        {
+            try
+            {
+                // Validate employee exists
+                if (!await _context.Employees.AnyAsync(e => e.Id == appraisal.EmployeeId))
+                    return false;
+
+                _context.Appraisals.Add(appraisal);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateAppraisalAsync(Appraisal appraisal)
+        {
+            try
+            {
+                _context.Entry(appraisal).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteAppraisalAsync(int id)
+        {
+            try
+            {
+                var appraisal = await _context.Appraisals.FindAsync(id);
+                if (appraisal == null) return false;
+
+                _context.Appraisals.Remove(appraisal);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<List<Appraisal>> GetAppraisalsByDateRangeAsync(DateOnly startDate, DateOnly endDate)
+        {
+            return await _context.Appraisals
+                .Include(a => a.Employee)
+                .Where(a => a.AppraisalDate >= startDate && a.AppraisalDate <= endDate)
+                .OrderByDescending(a => a.AppraisalDate)
+                .ToListAsync();
+        }
+    }
+}

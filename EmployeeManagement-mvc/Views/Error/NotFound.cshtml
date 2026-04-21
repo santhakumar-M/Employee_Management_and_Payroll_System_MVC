@@ -1,0 +1,15 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Page not found";
+}
+
+<div class="text-center" style="padding:6rem 1rem;">
+    <h1 class="display-1 text-accent">404</h1>
+    <h3 class="mb-3">Page not found</h3>
+    <p class="muted">The page you are looking for may have been moved, deleted, or is temporarily unavailable.</p>
+
+    <div class="mt-4">
+        <a asp-controller="Dashboard" asp-action="Admin" class="btn btn-primary me-2">Go to Dashboard</a>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Home</a>
+    </div>
+</div>

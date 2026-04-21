@@ -1,0 +1,14 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Logged out";
+}
+
+<div class="text-center" style="padding:4rem 1rem;">
+    <h2 class="text-accent">You have been logged out</h2>
+    <p class="muted">Your session has ended successfully. For security, please sign in again to continue.</p>
+
+    <div class="mt-4">
+        <a asp-controller="Account" asp-action="Login" class="btn btn-primary me-2">Sign in</a>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Return to home</a>
+    </div>
+</div>

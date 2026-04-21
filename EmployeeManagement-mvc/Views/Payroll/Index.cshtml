@@ -24,7 +24,13 @@
         </div>
 
         <div class="col-md-3 align-self-end">
-            <button type="submit" class="btn btn-primary">Process</button>
+            <div class="d-flex gap-2">
+                <div class="form-check align-self-center me-2">
+                    <input class="form-check-input" type="checkbox" value="true" id="applyLeaveDeduction" name="applyLeaveDeduction" />
+                    <label class="form-check-label muted" for="applyLeaveDeduction">Apply leave deduction</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Process</button>
+            </div>
         </div>
     </div>
 </form>
@@ -35,6 +41,9 @@
             <th>Month</th>
             <th>Basic</th>
             <th>Deductions</th>
+            <th>Unpaid days</th>
+            <th>Per day</th>
+            <th>Leave deduction</th>
             <th>Net</th>
             <th>Status</th>
         </tr>
@@ -42,11 +51,15 @@
     <tbody>
         @foreach (var p in Model)
         {
+            var details = ViewBag.PayrollDetails as System.Collections.Generic.Dictionary<int, EmployeeHrSystem.Models.PayrollDetailInfo>;
             <tr>
                 <td>@p.Employee?.Name</td>
                 <td>@p.Month</td>
                 <td>@p.BasicSalary</td>
                 <td>@p.Deductions</td>
+                <td>@(details != null && details.ContainsKey(p.PayrollId) ? details[p.PayrollId].UnpaidDays.ToString() : "-")</td>
+                <td>@(details != null && details.ContainsKey(p.PayrollId) ? details[p.PayrollId].PerDayDeduction.ToString("F2") : "-")</td>
+                <td>@(details != null && details.ContainsKey(p.PayrollId) ? details[p.PayrollId].LeaveDeduction.ToString("F2") : "-")</td>
                 <td>@p.NetSalary</td>
                 <td>@p.PaymentStatus</td>
             </tr>

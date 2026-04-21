@@ -69,34 +69,93 @@ namespace EmployeeHrSystem.Services
             }
         }
 
-        public async Task<HRReport> GenerateMonthlyReportAsync(DateOnly reportDate)
+        public async Task<HRReportViewModel> GenerateMonthlyReportAsync(DateOnly reportDate)
         {
+            // Basic employee counts
             var totalEmployees = await _context.Employees.CountAsync();
-            
-            // Calculate average attendance for the month
+            var activeEmployees = await _context.Employees.CountAsync(); // placeholder: consider an IsActive flag
+
+            // Attendance
             var attendanceRecords = await _context.Attendances
                 .Where(a => a.Date.Year == reportDate.Year && a.Date.Month == reportDate.Month)
                 .ToListAsync();
 
+            var presentCount = attendanceRecords.Count(a => a.Status == "PRESENT");
             var averageAttendance = attendanceRecords.Count > 0
-                ? (decimal)attendanceRecords.Count(a => a.Status == "PRESENT") / attendanceRecords.Count * 100
+                ? (decimal)presentCount / attendanceRecords.Count * 100
                 : 0;
 
-            // Get payroll summary
-            var payrollSummary = $"Payroll records for {reportDate.Year}-{reportDate.Month:D2}";
+            // Payroll calculations (aggregate from Payrolls table using Month string match)
+            var monthKey = $"{reportDate.Year}-{reportDate.Month:D2}";
+            var payrolls = await _context.Payrolls.Where(p => p.Month == monthKey).ToListAsync();
 
-            var report = new HRReport
+            var totalGross = payrolls.Sum(p => p.BasicSalary);
+            var totalDeductions = payrolls.Sum(p => p.Deductions);
+            var totalNet = payrolls.Sum(p => p.NetSalary);
+            var avgSalary = payrolls.Count > 0 ? payrolls.Average(p => p.NetSalary) : 0;
+
+            // Simple breakdown placeholders
+            var totalBasic = totalGross;
+            var totalAllowances = 0m;
+            var totalOvertime = 0m;
+            var totalOther = 0m;
+
+            // Deductions placeholders - real systems would store these breakdowns
+            var totalTax = 0m;
+            var totalPF = 0m;
+            var totalInsurance = 0m;
+            var totalLoan = 0m;
+
+            // Department breakdown
+            var departmentBreakdown = new List<(string, int, decimal)>();
+            var departments = await _context.Departments.Include(d => d.Employees).ToListAsync();
+            foreach (var dept in departments)
             {
-                ReportDate = reportDate,
+                var empIds = dept.Employees.Select(e => e.Id).ToList();
+                var deptPayroll = payrolls.Where(p => empIds.Contains(p.EmployeeId)).Sum(p => p.NetSalary);
+                departmentBreakdown.Add((dept.DepartmentName, dept.Employees.Count, deptPayroll));
+            }
+
+            // Leave/LOP calculations (approximate)
+            var paidLeaves = await _context.LeaveRequests
+                .Where(l => l.StartDate.Year == reportDate.Year && l.StartDate.Month == reportDate.Month)
+                .ToListAsync();
+            var paidLeaveDays = paidLeaves.Sum(l => (l.EndDate.ToDateTime(new TimeOnly(0)) - l.StartDate.ToDateTime(new TimeOnly(0))).Days + 1);
+
+            var reportVm = new HRReportViewModel
+            {
+                ReportingPeriod = reportDate.ToString("MMMM yyyy"),
+                ReportingYear = reportDate.Year,
+                ReportingMonth = reportDate.Month,
+                GeneratedOn = DateTime.Now,
                 TotalEmployees = totalEmployees,
-                AverageAttendance = averageAttendance,
-                PayrollSummary = payrollSummary
+                ActiveEmployees = activeEmployees,
+                NewHires = 0,
+                Resignations = 0,
+                TotalGrossSalary = totalGross,
+                TotalDeductions = totalDeductions,
+                TotalNetSalary = totalNet,
+                AverageSalary = avgSalary,
+                TotalBasic = totalBasic,
+                TotalAllowances = totalAllowances,
+                TotalOvertime = totalOvertime,
+                TotalOtherBenefits = totalOther,
+                TotalTax = totalTax,
+                TotalPF = totalPF,
+                TotalInsurance = totalInsurance,
+                TotalLoanDeductions = totalLoan,
+                DepartmentBreakdown = departmentBreakdown,
+                PaidLeaveDays = paidLeaveDays,
+                UnpaidLeaveDays = 0,
+                LossOfPay = 0m,
+                ComplianceStatus = "Compliant",
+                Notes = string.Empty,
+                PreparedBy = "",
+                ReviewedBy = "",
+                ApprovedBy = ""
             };
 
-            _context.HRReports.Add(report);
-            await _context.SaveChangesAsync();
-
-            return report;
+            return reportVm;
         }
     }
 }

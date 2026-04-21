@@ -1,0 +1,28 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Error";
+}
+
+<div class="container" style="padding:4rem 1rem;">
+    <div class="card card-custom p-4">
+        <h3>Something went wrong</h3>
+        <p class="muted">An unexpected error occurred. Our team has been notified.</p>
+
+        @if (ViewData["StatusCode"] != null)
+        {
+            <p>Status code: <strong>@ViewData["StatusCode"]</strong></p>
+        }
+        @if (ViewData["ExceptionMessage"] != null)
+        {
+            <details>
+                <summary>Details</summary>
+                <pre>@ViewData["ExceptionMessage"]</pre>
+            </details>
+        }
+
+        <div class="mt-3">
+            <a asp-controller="Dashboard" asp-action="Admin" class="btn btn-primary me-2">Go to Dashboard</a>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Home</a>
+        </div>
+    </div>
+</div>

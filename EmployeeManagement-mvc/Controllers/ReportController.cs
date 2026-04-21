@@ -23,9 +23,36 @@ namespace EmployeeHrSystem.Controllers
             var today = DateOnly.FromDateTime(DateTime.Today);
 
             // Generate monthly report using service
-            var report = await _reportService.GenerateMonthlyReportAsync(today);
+            var reportVm = await _reportService.GenerateMonthlyReportAsync(today);
 
-            return View(report);
+            return View(reportVm);
+        }
+
+        // GET: /Report/ExportCsv?year=2026&month=03
+        [HttpGet]
+        public async Task<IActionResult> ExportCsv(int? year, int? month)
+        {
+            var reportDate = (year.HasValue && month.HasValue)
+                ? new DateOnly(year.Value, month.Value, 1)
+                : DateOnly.FromDateTime(DateTime.Today);
+
+            var report = await _reportService.GenerateMonthlyReportAsync(reportDate);
+
+            var sb = new System.Text.StringBuilder();
+            sb.AppendLine("Department,EmployeeCount,PayrollCost");
+            foreach (var d in report.DepartmentBreakdown)
+            {
+                // Escape double quotes in department name
+                var dep = d.DepartmentName?.Replace("\"", "\"\"") ?? string.Empty;
+                sb.Append('"').Append(dep).Append('"').Append(',');
+                sb.Append(d.EmployeeCount).Append(',');
+                sb.AppendLine(d.PayrollCost.ToString(System.Globalization.CultureInfo.InvariantCulture));
+            }
+
+            var bytes = System.Text.Encoding.UTF8.GetBytes(sb.ToString());
+            var fileName = $"department_payroll_{report.ReportingPeriod.Replace(' ', '_')}.csv";
+
+            return File(bytes, "text/csv", fileName);
         }
     }
 }

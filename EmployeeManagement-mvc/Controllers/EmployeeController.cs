@@ -11,11 +11,45 @@ namespace EmployeeHrSystem.Controllers
     {
         private readonly IEmployeeService _employeeService;
         private readonly IDepartmentService _departmentService;
+        private readonly IAccountService _accountService;
 
-        public EmployeeController(IEmployeeService employeeService, IDepartmentService departmentService)
+        public EmployeeController(IEmployeeService employeeService, IDepartmentService departmentService, IAccountService accountService)
         {
             _employeeService = employeeService;
             _departmentService = departmentService;
+            _accountService = accountService;
+        }
+
+        // GET: /Employee/Attendance/{id}
+        [HttpGet]
+        public async Task<IActionResult> Attendance(int id, string? month)
+        {
+            // Use current month if not specified
+            month ??= DateTime.Now.ToString("yyyy-MM");
+
+            var employee = await _employeeService.GetEmployeeByIdAsync(id);
+            if (employee == null) return NotFound();
+
+            // Use AttendanceService via DI - instantiate via HttpContext.RequestServices to avoid changing constructor
+            var attendanceService = HttpContext.RequestServices.GetService(typeof(IAttendanceService)) as IAttendanceService;
+            if (attendanceService == null) return StatusCode(500);
+
+            var records = await attendanceService.GetEmployeeAttendanceAsync(id);
+            var monthRecords = records.Where(a => a.Date.ToString("yyyy-MM") == month).ToList();
+
+            int present = monthRecords.Count(a => a.Status == "PRESENT");
+            int absent = monthRecords.Count(a => a.Status == "ABSENT");
+
+            var vm = new EmployeeAttendanceSummaryViewModel
+            {
+                Employee = employee,
+                Month = month,
+                PresentDays = present,
+                AbsentDays = absent,
+                Records = monthRecords
+            };
+
+            return View(vm);
         }
 
         // GET: /Employee
@@ -37,7 +71,7 @@ namespace EmployeeHrSystem.Controllers
         // POST: /Employee/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Employee employee)
+        public async Task<IActionResult> Create(Employee employee, string? username, string? password)
         {
             if (!ModelState.IsValid)
             {
@@ -46,13 +80,34 @@ namespace EmployeeHrSystem.Controllers
                 return View(employee);
             }
 
-            var result = await _employeeService.CreateEmployeeAsync(employee);
-            if (!result)
+            var created = await _employeeService.CreateEmployeeAsync(employee);
+            if (!created)
             {
                 ModelState.AddModelError("", "Error creating employee.");
                 var departments = await _departmentService.GetAllDepartmentsAsync();
                 ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
                 return View(employee);
+            }
+
+            if (!string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
+            {
+                var user = new AppUser
+                {
+                    Username = username.Trim(),
+                    Role = "Employee",
+                    EmployeeId = employee.Id
+                };
+
+                var userCreated = await _accountService.CreateUserAsync(user, password);
+                if (!userCreated)
+                {
+                    // rollback employee to avoid orphaned employee without credentials
+                    await _employeeService.DeleteEmployeeAsync(employee.Id);
+                    ModelState.AddModelError("", "Error creating user account. Username may already exist.");
+                    var departments = await _departmentService.GetAllDepartmentsAsync();
+                    ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
+                    return View(employee);
+                }
             }
 
             return RedirectToAction(nameof(Index));

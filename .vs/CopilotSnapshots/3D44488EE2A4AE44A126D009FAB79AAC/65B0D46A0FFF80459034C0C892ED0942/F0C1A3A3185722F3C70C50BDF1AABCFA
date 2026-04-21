@@ -1,0 +1,31 @@
+﻿using EmployeeHrSystem.Models;
+using EmployeeHrSystem.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace EmployeeHrSystem.Controllers
+{
+    [Authorize(Roles = "Admin,HR Officer")]
+    public class ReportController : Controller
+    {
+        private readonly IReportService _reportService;
+        private readonly IDashboardService _dashboardService;
+
+        public ReportController(IReportService reportService, IDashboardService dashboardService)
+        {
+            _reportService = reportService;
+            _dashboardService = dashboardService;
+        }
+
+        // GET: /Report/HR
+        public async Task<IActionResult> HR()
+        {
+            var today = DateOnly.FromDateTime(DateTime.Today);
+
+            // Generate monthly report using service
+            var reportVm = await _reportService.GenerateMonthlyReportAsync(today);
+
+            return View(reportVm);
+        }
+    }
+}

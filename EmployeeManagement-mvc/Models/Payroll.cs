@@ -10,6 +10,15 @@ namespace EmployeeHrSystem.Models
         public string Month { get; set; } = string.Empty; // e.g., 2026-03
         public decimal BasicSalary { get; set; }
         public decimal Deductions { get; set; }
+        // Leave / deduction details (not mapped to DB unless you run migrations)
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public int UnpaidDays { get; set; }
+
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public decimal PerDayDeduction { get; set; }
+
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public decimal LeaveDeduction { get; set; }
         public decimal NetSalary { get; set; }
         public string PaymentStatus { get; set; } = "PENDING";
     }

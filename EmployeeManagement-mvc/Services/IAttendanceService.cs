@@ -22,6 +22,8 @@ namespace EmployeeHrSystem.Services
         Task<bool> MarkBulkAttendanceAsync(DateOnly date, List<EmployeeAttendanceItem> employees);
         Task<MonthlyAttendanceSummary?> GetMonthlyAttendanceSummaryAsync(int employeeId, string month);
         Task<List<MonthlyAttendanceSummary>> GetAllMonthlyAttendanceSummariesAsync(string month);
+        // Get all monthly summaries for a specific employee
+        Task<List<MonthlyAttendanceSummary>> GetSummariesForEmployeeAsync(int employeeId);
         Task<bool> ResetMonthlyAttendanceAsync(string newMonth);
         Task<decimal> GetAttendancePercentageAsync(int employeeId, string month);
         Task<List<Attendance>> GetAttendanceForDateAsync(DateOnly date);

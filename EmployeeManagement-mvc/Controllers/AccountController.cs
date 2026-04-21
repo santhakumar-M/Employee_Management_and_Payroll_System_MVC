@@ -75,7 +75,17 @@ namespace EmployeeHrSystem.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Login", "Account");
+            // set a flag so the next request can hide the navbar on the logged-out confirmation page
+            TempData["HideNav"] = "true";
+            // redirect to a GET action so the next request sees the unauthenticated user
+            return RedirectToAction(nameof(LoggedOut));
+        }
+
+        // GET: /Account/LoggedOut
+        [HttpGet]
+        public IActionResult LoggedOut()
+        {
+            return View();
         }
 
         // ── GET /Account/AccessDenied ───────────────────────────────────────
