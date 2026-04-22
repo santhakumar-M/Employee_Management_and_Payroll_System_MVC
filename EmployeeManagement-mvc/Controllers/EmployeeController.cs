@@ -39,6 +39,7 @@ namespace EmployeeHrSystem.Controllers
 
             int present = monthRecords.Count(a => a.Status == "PRESENT");
             int absent = monthRecords.Count(a => a.Status == "ABSENT");
+            int leave = monthRecords.Count(a => a.Status == "LEAVE");
 
             var vm = new EmployeeAttendanceSummaryViewModel
             {
@@ -46,6 +47,7 @@ namespace EmployeeHrSystem.Controllers
                 Month = month,
                 PresentDays = present,
                 AbsentDays = absent,
+                LeaveDays = leave,
                 Records = monthRecords
             };
 
@@ -71,7 +73,7 @@ namespace EmployeeHrSystem.Controllers
         // POST: /Employee/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Employee employee, string? username, string? password)
+        public async Task<IActionResult> Create(Employee employee, string? username, string? password, string? role)
         {
             if (!ModelState.IsValid)
             {
@@ -91,10 +93,11 @@ namespace EmployeeHrSystem.Controllers
 
             if (!string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
             {
+                var assignedRole = string.IsNullOrWhiteSpace(role) ? "Employee" : role.Trim();
                 var user = new AppUser
                 {
                     Username = username.Trim(),
-                    Role = "Employee",
+                    Role = assignedRole,
                     EmployeeId = employee.Id
                 };
 

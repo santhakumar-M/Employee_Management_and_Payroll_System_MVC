@@ -1,0 +1,58 @@
+﻿@model EmployeeHrSystem.Models.Attendance
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">@(Model.AttendanceId > 0 ? "Edit Attendance" : "Mark Attendance")</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Mark" asp-controller="Attendance" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                        @if (Model.AttendanceId > 0)
+                        {
+                            <input type="hidden" asp-for="AttendanceId" />
+                        }
+
+                        <div class="mb-3">
+                            <label asp-for="EmployeeId" class="form-label">Employee</label>
+                            <select asp-for="EmployeeId"
+                                    class="form-select"
+                                    asp-items="ViewBag.EmployeeItems">
+                                <option value="">-- Select Employee --</option>
+                            </select>
+                            <span asp-validation-for="EmployeeId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Date" class="form-label">Date</label>
+                            <input asp-for="Date" type="date" class="form-control" />
+                            <span asp-validation-for="Date" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Status" class="form-label">Status</label>
+                            <select asp-for="Status" class="form-select">
+                                <option value="PRESENT">PRESENT</option>
+                                <option value="ABSENT">ABSENT</option>
+                                <option value="LEAVE">LEAVE</option>
+                            </select>
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="btn btn-success me-2" type="submit">
+                                <i class="bi bi-check-circle"></i> @(Model.AttendanceId > 0 ? "Update" : "Mark")
+                            </button>
+                            <a asp-action="Index" asp-controller="Attendance" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> Back
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

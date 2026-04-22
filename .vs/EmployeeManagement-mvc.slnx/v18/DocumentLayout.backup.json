@@ -1,202 +1,302 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\",
+  "WorkspaceRootPath": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\report\\hr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\report\\hr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\hrreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\hrreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\markforday.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\markforday.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\employeeattendancereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\employeeattendancereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIXES_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_FIXES_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_TEST_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_QUICK_TEST_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CODE_CHANGES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_CODE_CHANGES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIX_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_FIX_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_SYSTEM_VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\viewbydate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\viewbydate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CHANGES_COMPLETED.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_CHANGES_COMPLETED.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_TESTING_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_TESTING_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_IMPLEMENTATION_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_IMPLEMENTATION_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_SYSTEM_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\attendanceviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\attendanceviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\error\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\error\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\error\\generic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\error\\generic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\account\\loggedout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\account\\loggedout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\ipayrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\ipayrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\payrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\payrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\payroll\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\payroll\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\employeeattendancesummaryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\employeeattendancesummaryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\employee\\attendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\employee\\attendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\payrolldetailinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\payrolldetailinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\payrolldetailinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\payroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\payroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\payroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\shaisha\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\appraisalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\monthlyattendancesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\monthlyattendancesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\hrreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\hrreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\hrreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\hrreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\evaluation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\evaluation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\employeeattendancesummaryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\employeeattendancesummaryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\attendanceviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\attendanceviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\appraisal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\appraisal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\models\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\models\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\report\\hr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\report\\hr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\markforday.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\markforday.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\employeeattendancereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\employeeattendancereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIXES_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_FIXES_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_TEST_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_QUICK_TEST_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CODE_CHANGES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_CODE_CHANGES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIX_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_FIX_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_SYSTEM_VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\viewbydate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\viewbydate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CHANGES_COMPLETED.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_CHANGES_COMPLETED.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_TESTING_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_TESTING_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_IMPLEMENTATION_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_IMPLEMENTATION_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_SYSTEM_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\error\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\error\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\error\\generic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\error\\generic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\account\\loggedout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\account\\loggedout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\ipayrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\ipayrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\payrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\payrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\payroll\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\payroll\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\employee\\attendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\employee\\attendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\appraisalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\appraisalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\performancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\performancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\appraisalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\appraisalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\leave\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\leave\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\performance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\performance\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\appraisal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\appraisal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\employee\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\employee\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\attendance\\monthlyreport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\attendance\\monthlyreport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\leave\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\leave\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\department\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\department\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\performance\\record.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\performance\\record.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|c:\\bhanu\\employee_management_and_payroll_system_mvc\\employeemanagement-mvc\\views\\appraisal\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47AD3279-F396-8511-81E6-F710BCD39486}|EmployeeManagement-mvc\\EmployeeManagement-mvc.csproj|solutionrelative:employeemanagement-mvc\\views\\appraisal\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -206,8 +306,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -217,218 +321,579 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "AppraisalService.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\AppraisalService.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\AppraisalService.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\AppraisalService.cs",
-              "RelativeToolTip": "EmployeeManagement-mvc\\Services\\AppraisalService.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T10:14:12.706Z",
+              "DocumentIndex": 73,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Appraisal\\Update.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Appraisal\\Update.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Appraisal\\Update.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Appraisal\\Update.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T12:08:52.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 72,
+              "Title": "Record.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Performance\\Record.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Performance\\Record.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Performance\\Record.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Performance\\Record.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T12:08:52.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Department\\Create.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Department\\Create.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Department\\Create.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Department\\Create.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T12:08:52.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Edit.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Employee\\Edit.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Edit.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Employee\\Edit.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T12:08:52.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Leave\\Index.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Leave\\Index.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Leave\\Index.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Leave\\Index.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T11:22:10.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PayrollDetailInfo.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\PayrollDetailInfo.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\PayrollDetailInfo.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\PayrollDetailInfo.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\PayrollDetailInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T10:45:35.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Performance\\Index.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Performance\\Index.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Performance\\Index.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Performance\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T11:22:10.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Appraisal\\Index.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Appraisal\\Index.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Appraisal\\Index.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Appraisal\\Index.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T11:22:11.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Delete.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Employee\\Delete.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Delete.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Employee\\Delete.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T11:22:11.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Apply.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Leave\\Apply.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Leave\\Apply.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Leave\\Apply.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Leave\\Apply.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T12:03:14.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "MonthlyReport.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\MonthlyReport.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\MonthlyReport.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\MonthlyReport.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\MonthlyReport.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T11:22:11.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "LeaveController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\LeaveController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\LeaveController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\LeaveController.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\LeaveController.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T11:21:30.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "AppraisalController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AppraisalController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\AppraisalController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AppraisalController.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\AppraisalController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T11:21:29.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "PerformanceController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\PerformanceController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\PerformanceController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\PerformanceController.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\PerformanceController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T11:21:29.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:37:34.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Evaluation.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Evaluation.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\Evaluation.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Evaluation.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\Evaluation.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:37:38.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HRReport.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\HRReport.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\HRReport.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\HRReport.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\HRReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:37:41.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LeaveRequest.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\LeaveRequest.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\LeaveRequest.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\LeaveRequest.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\LeaveRequest.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:37:59.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MonthlyAttendanceSummary.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\MonthlyAttendanceSummary.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\MonthlyAttendanceSummary.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\MonthlyAttendanceSummary.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\MonthlyAttendanceSummary.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:38:06.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\Employee.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Employee.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\Employee.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAhwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:37:25.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Payroll.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Payroll.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\Payroll.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Payroll.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\Payroll.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T11:05:48.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\Department.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Department.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\Department.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAhwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:37:20.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Attendance.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Attendance.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\Attendance.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Attendance.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\Attendance.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:36:59.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\AppUser.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\AppUser.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\AppUser.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\AppUser.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAhwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:36:44.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HRReportViewModel.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\HRReportViewModel.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\HRReportViewModel.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\HRReportViewModel.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\HRReportViewModel.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:43:58.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Appraisal.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Appraisal.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\Appraisal.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Appraisal.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\Appraisal.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:36:37.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\ApplicationContext.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\ApplicationContext.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\ApplicationContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:36:35.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Program.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Program.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Program.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Program.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:54:21.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "EmployeeAttendanceSummaryViewModel.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\EmployeeAttendanceSummaryViewModel.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\EmployeeAttendanceSummaryViewModel.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\EmployeeAttendanceSummaryViewModel.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\EmployeeAttendanceSummaryViewModel.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\EmployeeAttendanceSummaryViewModel.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Models\\EmployeeAttendanceSummaryViewModel.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAIBQwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAMwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T10:07:45.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Create.cshtml",
-              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Employee\\Create.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Create.cshtml",
-              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Employee\\Create.cshtml",
-              "ViewState": "AgIAACsAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-20T10:06:53.272Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 18,
               "Title": "HR.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Report\\HR.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Report\\HR.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Report\\HR.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Report\\HR.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Report\\HR.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Report\\HR.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-19T17:44:56.987Z",
+              "WhenOpened": "2026-04-19T17:44:56.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Create.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Employee\\Create.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Create.cshtml",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Employee\\Create.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T10:06:53.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Program.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Program.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Program.cs",
-              "RelativeToolTip": "EmployeeManagement-mvc\\Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "AttendanceViewModels.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA9wBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T17:54:21.761Z",
+              "WhenOpened": "2026-04-17T09:12:21.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 60,
+              "Title": "LeaveService.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\LeaveService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\LeaveService.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\LeaveService.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Services\\LeaveService.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T08:37:09.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
               "Title": "ProfileController.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ProfileController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\ProfileController.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ProfileController.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\ProfileController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAIBJwGwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAIBJwG4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T10:26:39.519Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Payroll.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Payroll.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\Payroll.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\Payroll.cs",
-              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\Payroll.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAABQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T11:05:48.872Z"
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\appsettings.json",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\appsettings.json",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\appsettings.json",
+              "RelativeToolTip": "EmployeeManagement-mvc\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-17T06:15:27.687Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "PayrollDetailInfo.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\PayrollDetailInfo.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\PayrollDetailInfo.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\PayrollDetailInfo.cs",
-              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\PayrollDetailInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 59,
+              "Title": "AppraisalService.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\AppraisalService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\AppraisalService.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\AppraisalService.cs",
+              "RelativeToolTip": "EmployeeManagement-mvc\\Services\\AppraisalService.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T10:45:35.327Z"
+              "WhenOpened": "2026-04-21T10:14:12.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 58,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Profile\\Index.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Profile\\Index.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Profile\\Index.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Profile\\Index.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Profile\\Index.cshtml",
-              "ViewState": "AgIAAGcAAAAAAAAAAABRwGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAIBJwHUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-20T10:26:52.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 55,
               "Title": "Attendance.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Attendance.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Attendance.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Employee\\Attendance.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Attendance.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Attendance.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Employee\\Attendance.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAIBJwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-20T10:07:55.048Z"
+              "WhenOpened": "2026-04-20T10:07:55.048Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 53,
               "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\EmployeeController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T10:06:43.069Z"
+              "WhenOpened": "2026-04-20T10:06:43.069Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 56,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Index.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Index.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Employee\\Index.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Index.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Employee\\Index.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Employee\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-20T10:08:07.041Z"
+              "WhenOpened": "2026-04-20T10:08:07.041Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 49,
               "Title": "IPayrollService.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IPayrollService.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IPayrollService.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\IPayrollService.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IPayrollService.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IPayrollService.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Services\\IPayrollService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAABQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T09:43:10.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T09:43:10.223Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 50,
               "Title": "PayrollService.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\PayrollService.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\PayrollService.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\PayrollService.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\PayrollService.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\PayrollService.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Services\\PayrollService.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T09:43:27.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T09:43:27.968Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 51,
               "Title": "PayrollController.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\PayrollController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\PayrollController.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\PayrollController.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\PayrollController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\PayrollController.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\PayrollController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAABBwAMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAIBJwAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T09:43:36.886Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 52,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Payroll\\Index.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Payroll\\Index.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Payroll\\Index.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Payroll\\Index.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Payroll\\Index.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Payroll\\Index.cshtml",
-              "ViewState": "AgIAABwAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-20T09:43:47.421Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 45,
               "Title": "NotFound.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Error\\NotFound.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Error\\NotFound.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Error\\NotFound.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Error\\NotFound.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Error\\NotFound.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Error\\NotFound.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -436,11 +901,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 46,
               "Title": "Generic.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Error\\Generic.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Error\\Generic.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Error\\Generic.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Error\\Generic.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Error\\Generic.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Error\\Generic.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -448,11 +913,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 44,
               "Title": "ErrorController.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ErrorController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ErrorController.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\ErrorController.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ErrorController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ErrorController.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\ErrorController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -460,11 +925,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 47,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AccountController.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -472,11 +937,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 48,
               "Title": "LoggedOut.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Account\\LoggedOut.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Account\\LoggedOut.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Account\\LoggedOut.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Account\\LoggedOut.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Account\\LoggedOut.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Account\\LoggedOut.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -484,11 +949,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 19,
               "Title": "site.css",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\wwwroot\\css\\site.css",
               "RelativeToolTip": "EmployeeManagement-mvc\\wwwroot\\css\\site.css",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -496,23 +961,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 43,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAKUAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMsAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-19T17:52:54.208Z"
+              "WhenOpened": "2026-04-19T17:52:54.208Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 20,
               "Title": "ReportService.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\ReportService.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\ReportService.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\ReportService.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\ReportService.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\ReportService.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Services\\ReportService.cs",
               "ViewState": "AgIAAHYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -520,23 +986,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HRReportViewModel.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\HRReportViewModel.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\HRReportViewModel.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\HRReportViewModel.cs",
-              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\HRReportViewModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA3wDoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T17:43:58.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 41,
               "Title": "IReportService.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IReportService.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IReportService.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\IReportService.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IReportService.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IReportService.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Services\\IReportService.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAEBUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -544,23 +998,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\appsettings.json",
-              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\appsettings.json",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\appsettings.json",
-              "RelativeToolTip": "EmployeeManagement-mvc\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-17T06:15:27.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 42,
               "Title": "ReportController.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ReportController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ReportController.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\ReportController.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ReportController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\ReportController.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\ReportController.cs",
               "ViewState": "AgIAADYAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -568,35 +1010,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 32,
               "Title": "ViewByDate.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\ViewByDate.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAABBwGoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAIBJwHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T09:02:11.94Z"
+              "WhenOpened": "2026-04-17T09:02:11.94Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AttendanceViewModels.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
-              "RelativeToolTip": "EmployeeManagement-mvc\\Models\\AttendanceViewModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T09:12:21.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 40,
               "Title": "ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
               "RelativeDocumentMoniker": "ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
               "RelativeToolTip": "ATTENDANCE_DROPDOWN_UPDATE_COMPLETE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -604,11 +1035,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 33,
               "Title": "IAttendanceService.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Services\\IAttendanceService.cs",
               "ViewState": "AgIAABgAAAAAAAAAAEBUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -616,11 +1047,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 34,
               "Title": "ATTENDANCE_CHANGES_COMPLETED.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CHANGES_COMPLETED.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CHANGES_COMPLETED.md",
               "RelativeDocumentMoniker": "ATTENDANCE_CHANGES_COMPLETED.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CHANGES_COMPLETED.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CHANGES_COMPLETED.md",
               "RelativeToolTip": "ATTENDANCE_CHANGES_COMPLETED.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -628,11 +1059,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 39,
               "Title": "ATTENDANCE_SYSTEM_ARCHITECTURE.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_ARCHITECTURE.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_ARCHITECTURE.md",
               "RelativeDocumentMoniker": "ATTENDANCE_SYSTEM_ARCHITECTURE.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_ARCHITECTURE.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_ARCHITECTURE.md",
               "RelativeToolTip": "ATTENDANCE_SYSTEM_ARCHITECTURE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -640,11 +1071,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 38,
               "Title": "ATTENDANCE_QUICK_REFERENCE.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_REFERENCE.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_REFERENCE.md",
               "RelativeDocumentMoniker": "ATTENDANCE_QUICK_REFERENCE.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_REFERENCE.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_REFERENCE.md",
               "RelativeToolTip": "ATTENDANCE_QUICK_REFERENCE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -652,11 +1083,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 37,
               "Title": "QUICK_REFERENCE.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\QUICK_REFERENCE.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\QUICK_REFERENCE.md",
               "RelativeDocumentMoniker": "QUICK_REFERENCE.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\QUICK_REFERENCE.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\QUICK_REFERENCE.md",
               "RelativeToolTip": "QUICK_REFERENCE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -664,11 +1095,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 36,
               "Title": "ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
               "RelativeDocumentMoniker": "ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
               "RelativeToolTip": "ATTENDANCE_IMPLEMENTATION_COMPLETE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -676,11 +1107,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 35,
               "Title": "ATTENDANCE_TESTING_GUIDE.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_TESTING_GUIDE.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_TESTING_GUIDE.md",
               "RelativeDocumentMoniker": "ATTENDANCE_TESTING_GUIDE.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_TESTING_GUIDE.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_TESTING_GUIDE.md",
               "RelativeToolTip": "ATTENDANCE_TESTING_GUIDE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -688,11 +1119,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 27,
               "Title": "ATTENDANCE_FIXES_COMPLETE.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIXES_COMPLETE.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIXES_COMPLETE.md",
               "RelativeDocumentMoniker": "ATTENDANCE_FIXES_COMPLETE.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIXES_COMPLETE.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIXES_COMPLETE.md",
               "RelativeToolTip": "ATTENDANCE_FIXES_COMPLETE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -700,11 +1131,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 28,
               "Title": "ATTENDANCE_QUICK_TEST_GUIDE.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_TEST_GUIDE.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_TEST_GUIDE.md",
               "RelativeDocumentMoniker": "ATTENDANCE_QUICK_TEST_GUIDE.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_TEST_GUIDE.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_QUICK_TEST_GUIDE.md",
               "RelativeToolTip": "ATTENDANCE_QUICK_TEST_GUIDE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -712,11 +1143,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 29,
               "Title": "ATTENDANCE_CODE_CHANGES.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CODE_CHANGES.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CODE_CHANGES.md",
               "RelativeDocumentMoniker": "ATTENDANCE_CODE_CHANGES.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CODE_CHANGES.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_CODE_CHANGES.md",
               "RelativeToolTip": "ATTENDANCE_CODE_CHANGES.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -724,11 +1155,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 31,
               "Title": "ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
               "RelativeDocumentMoniker": "ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
               "RelativeToolTip": "ATTENDANCE_SYSTEM_VISUAL_GUIDE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -736,11 +1167,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 30,
               "Title": "ATTENDANCE_FIX_SUMMARY.md",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIX_SUMMARY.md",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIX_SUMMARY.md",
               "RelativeDocumentMoniker": "ATTENDANCE_FIX_SUMMARY.md",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIX_SUMMARY.md",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\ATTENDANCE_FIX_SUMMARY.md",
               "RelativeToolTip": "ATTENDANCE_FIX_SUMMARY.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -748,47 +1179,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
               "Title": "MarkForDay.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\MarkForDay.cshtml",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAcwAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAIBJwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T05:38:12.415Z"
+              "WhenOpened": "2026-04-17T05:38:12.415Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 22,
               "Title": "Mark.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\Mark.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T05:38:06.857Z"
+              "WhenOpened": "2026-04-17T05:38:06.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 23,
               "Title": "EmployeeAttendanceReport.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\EmployeeAttendanceReport.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T05:37:37.757Z"
+              "WhenOpened": "2026-04-17T05:37:37.757Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 25,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
               "RelativeToolTip": "EmployeeManagement-mvc\\Views\\Attendance\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAABBwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -796,27 +1230,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 26,
               "Title": "AttendanceService.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Services\\AttendanceService.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Services\\AttendanceService.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Services\\AttendanceService.cs",
-              "ViewState": "AgIAACQBAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T05:36:38.436Z"
+              "WhenOpened": "2026-04-17T05:36:38.436Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 24,
               "Title": "AttendanceController.cs",
-              "DocumentMoniker": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
+              "DocumentMoniker": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
               "RelativeDocumentMoniker": "EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
-              "ToolTip": "C:\\SHAISHA\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
+              "ToolTip": "C:\\Bhanu\\Employee_Management_and_Payroll_System_MVC\\EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
               "RelativeToolTip": "EmployeeManagement-mvc\\Controllers\\AttendanceController.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQBAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T05:36:34.077Z"
+              "WhenOpened": "2026-04-17T05:36:34.077Z",
+              "EditorCaption": ""
             }
           ]
         }

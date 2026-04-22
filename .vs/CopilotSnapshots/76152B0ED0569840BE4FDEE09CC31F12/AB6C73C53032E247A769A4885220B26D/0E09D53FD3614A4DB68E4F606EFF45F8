@@ -1,0 +1,174 @@
+﻿using EmployeeHrSystem.Models;
+using EmployeeHrSystem.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace EmployeeHrSystem.Controllers
+{
+    [Authorize(Roles = "Admin,HR Officer")]
+    public class EmployeeController : Controller
+    {
+        private readonly IEmployeeService _employeeService;
+        private readonly IDepartmentService _departmentService;
+        private readonly IAccountService _accountService;
+
+        public EmployeeController(IEmployeeService employeeService, IDepartmentService departmentService, IAccountService accountService)
+        {
+            _employeeService = employeeService;
+            _departmentService = departmentService;
+            _accountService = accountService;
+        }
+
+        // GET: /Employee/Attendance/{id}
+        [HttpGet]
+        public async Task<IActionResult> Attendance(int id, string? month)
+        {
+            // Use current month if not specified
+            month ??= DateTime.Now.ToString("yyyy-MM");
+
+            var employee = await _employeeService.GetEmployeeByIdAsync(id);
+            if (employee == null) return NotFound();
+
+            // Use AttendanceService via DI - instantiate via HttpContext.RequestServices to avoid changing constructor
+            var attendanceService = HttpContext.RequestServices.GetService(typeof(IAttendanceService)) as IAttendanceService;
+            if (attendanceService == null) return StatusCode(500);
+
+            var records = await attendanceService.GetEmployeeAttendanceAsync(id);
+            var monthRecords = records.Where(a => a.Date.ToString("yyyy-MM") == month).ToList();
+
+            int present = monthRecords.Count(a => a.Status == "PRESENT");
+            int absent = monthRecords.Count(a => a.Status == "ABSENT");
+
+            var vm = new EmployeeAttendanceSummaryViewModel
+            {
+                Employee = employee,
+                Month = month,
+                PresentDays = present,
+                AbsentDays = absent,
+                Records = monthRecords
+            };
+
+            return View(vm);
+        }
+
+        // GET: /Employee
+        public async Task<IActionResult> Index()
+        {
+            var list = await _employeeService.GetAllEmployeesAsync();
+            return View(list);
+        }
+
+        // GET: /Employee/Create
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            var departments = await _departmentService.GetAllDepartmentsAsync();
+            ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
+            return View();
+        }
+
+        // POST: /Employee/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Employee employee, string? username, string? password)
+        {
+            if (!ModelState.IsValid)
+            {
+                var departments = await _departmentService.GetAllDepartmentsAsync();
+                ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
+                return View(employee);
+            }
+
+            var created = await _employeeService.CreateEmployeeAsync(employee);
+            if (!created)
+            {
+                ModelState.AddModelError("", "Error creating employee.");
+                var departments = await _departmentService.GetAllDepartmentsAsync();
+                ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
+                return View(employee);
+            }
+
+            if (!string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
+            {
+                var user = new AppUser
+                {
+                    Username = username.Trim(),
+                    Role = "Employee",
+                    EmployeeId = employee.Id
+                };
+
+                var userCreated = await _accountService.CreateUserAsync(user, password);
+                if (!userCreated)
+                {
+                    // rollback employee to avoid orphaned employee without credentials
+                    await _employeeService.DeleteEmployeeAsync(employee.Id);
+                    ModelState.AddModelError("", "Error creating user account. Username may already exist.");
+                    var departments = await _departmentService.GetAllDepartmentsAsync();
+                    ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
+                    return View(employee);
+                }
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: /Employee/Edit/5
+        public async Task<IActionResult> Edit(int id)
+        {
+            var e = await _employeeService.GetEmployeeByIdAsync(id);
+            if (e == null) return NotFound();
+
+            var departments = await _departmentService.GetAllDepartmentsAsync();
+            ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName", e.DepartmentId);
+            return View(e);
+        }
+
+        // POST: /Employee/Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Employee e)
+        {
+            if (!ModelState.IsValid)
+            {
+                var departments = await _departmentService.GetAllDepartmentsAsync();
+                ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName", e.DepartmentId);
+                return View(e);
+            }
+
+            var result = await _employeeService.UpdateEmployeeAsync(e);
+            if (!result)
+            {
+                ModelState.AddModelError("", "Error updating employee.");
+                var departments = await _departmentService.GetAllDepartmentsAsync();
+                ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName", e.DepartmentId);
+                return View(e);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: /Employee/Delete/5
+        public async Task<IActionResult> Delete(int id)
+        {
+            var e = await _employeeService.GetEmployeeByIdAsync(id);
+            if (e == null) return NotFound();
+            return View(e);
+        }
+
+        // POST: /Employee/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var result = await _employeeService.DeleteEmployeeAsync(id);
+            if (!result)
+            {
+                TempData["Error"] = "Error deleting employee.";
+                return RedirectToAction(nameof(Index));
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

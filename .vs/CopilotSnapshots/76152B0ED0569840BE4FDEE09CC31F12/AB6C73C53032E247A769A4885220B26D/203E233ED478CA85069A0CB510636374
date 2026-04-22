@@ -1,0 +1,129 @@
+﻿using EmployeeHrSystem.Models;
+using EmployeeHrSystem.Services;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace EmployeeHrSystem.Controllers
+{
+    [Authorize(Roles = "Admin,Payroll Officer")]
+    public class PayrollController : Controller
+    {
+        private readonly IPayrollService _payrollService;
+        private readonly IEmployeeService _employeeService;
+        private readonly IAttendanceService _attendanceService;
+
+        public PayrollController(IPayrollService payrollService, IEmployeeService employeeService, IAttendanceService attendanceService)
+        {
+            _payrollService = payrollService;
+            _employeeService = employeeService;
+            _attendanceService = attendanceService;
+        }
+
+        // GET: /Payroll
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            var employees = await _employeeService.GetAllEmployeesAsync();
+            ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+
+            var list = await _payrollService.GetAllPayrollsAsync();
+
+            var details = new Dictionary<int, PayrollDetailInfo>();
+            foreach (var pay in list)
+            {
+                int unpaidDays = 0;
+                int totalWorkingDays = 0;
+                decimal perDay = 0m;
+                decimal leaveDeduction = 0m;
+
+                if (!string.IsNullOrWhiteSpace(pay.Month))
+                {
+                    var parts = pay.Month.Split('-');
+                    if (parts.Length == 2 && int.TryParse(parts[0], out var yy) && int.TryParse(parts[1], out var mm))
+                    {
+                        var att = await _attendanceService.GetEmployeeAttendanceAsync(pay.EmployeeId);
+                        var monthRecords = att.Where(a => a.Date.Year == yy && a.Date.Month == mm).ToList();
+                        unpaidDays = monthRecords.GroupBy(a => a.Date).Count(g => g.Any(x => x.Status != null && x.Status.ToUpper() == "ABSENT"));
+                        totalWorkingDays = GetWorkingDaysInMonth(yy, mm);
+                        perDay = totalWorkingDays > 0 ? (pay.BasicSalary / (decimal)totalWorkingDays) : 0m;
+                        leaveDeduction = unpaidDays * perDay;
+                        // prefer any existing stored payroll values
+                        if (pay.UnpaidDays > 0) unpaidDays = pay.UnpaidDays;
+                        if (pay.PerDayDeduction > 0) perDay = pay.PerDayDeduction;
+                        if (pay.LeaveDeduction > 0) leaveDeduction = pay.LeaveDeduction;
+                    }
+                }
+
+                details[pay.PayrollId] = new PayrollDetailInfo
+                {
+                    PayrollId = pay.PayrollId,
+                    UnpaidDays = unpaidDays,
+                    PerDayDeduction = perDay,
+                    LeaveDeduction = leaveDeduction,
+                    TotalWorkingDays = totalWorkingDays
+                };
+            }
+
+            ViewBag.PayrollDetails = details;
+
+            return View(list);
+        }
+
+        // POST: /Payroll/Process
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Process([FromForm] int employeeId, [FromForm] string month, [FromForm] bool applyLeaveDeduction = false)
+        {
+            if (string.IsNullOrWhiteSpace(month))
+                ModelState.AddModelError("month", "Month is required (YYYY-MM).");
+
+            if (!ModelState.IsValid)
+            {
+                var employees = await _employeeService.GetAllEmployeesAsync();
+                ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+                var list = await _payrollService.GetAllPayrollsAsync();
+                return View("Index", list);
+            }
+
+            var p = new Payroll
+            {
+                EmployeeId = employeeId,
+                Month = month.Trim(),
+                BasicSalary = 0, // Service will populate from employee
+                Deductions = 0,
+                NetSalary = 0,
+                PaymentStatus = "PENDING"
+            };
+
+            // Service will compute per-day deduction when applyLeaveDeduction is true.
+            var success = await _payrollService.ProcessPayrollAsync(p, applyLeaveDeduction, 0m);
+            if (!success)
+            {
+                // Error handling for payroll processing
+                ModelState.AddModelError("", "Error processing payroll. Employee may not exist.");
+                var employees = await _employeeService.GetAllEmployeesAsync();
+                ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+                var list = await _payrollService.GetAllPayrollsAsync();
+                return View("Index", list);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // Helper: compute working weekdays (Mon-Fri) for a given month
+        private static int GetWorkingDaysInMonth(int year, int month)
+        {
+            int daysInMonth = DateTime.DaysInMonth(year, month);
+            int workingDays = 0;
+            for (int day = 1; day <= daysInMonth; day++)
+            {
+                var dow = new DateOnly(year, month, day).DayOfWeek;
+                if (dow != DayOfWeek.Saturday && dow != DayOfWeek.Sunday)
+                    workingDays++;
+            }
+            return workingDays;
+        }
+    }
+}

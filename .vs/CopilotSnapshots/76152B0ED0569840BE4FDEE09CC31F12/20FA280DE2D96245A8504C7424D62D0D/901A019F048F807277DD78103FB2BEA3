@@ -1,0 +1,188 @@
+﻿@using EmployeeHrSystem.Models
+@model BulkAttendanceViewModel
+@{
+    ViewData["Title"] = "Mark Attendance for Day";
+}
+
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>Mark Attendance for Day</h2>
+        </div>
+    </div>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> Please correct the errors below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <form method="post" class="card p-4">
+        @Html.AntiForgeryToken()
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <label for="selectedDate" class="form-label">Date</label>
+                <input type="date" class="form-control" id="selectedDate" name="selectedDate" 
+                       value="@Model.SelectedDate.ToString("yyyy-MM-dd")" required />
+                <span asp-validation-for="SelectedDate" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h5>Mark Attendance for Employees</h5>
+                <hr />
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th style="width: 30%">Employee Name</th>
+                        <th style="width: 25%">Designation</th>
+                        <th style="width: 25%">Status</th>
+                        <th style="width: 20%">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Employees != null && Model.Employees.Any())
+                    {
+                        @for (int i = 0; i < Model.Employees.Count; i++)
+                        {
+                            var employee = Model.Employees[i];
+                            var statusClass = employee.IsOnLeave ? "table-info" 
+                                : employee.Status == "PRESENT" ? "table-success" : "table-danger";
+                            var badgeClass = employee.IsOnLeave ? "bg-info" 
+                                : employee.Status == "PRESENT" ? "bg-success" : "bg-danger";
+
+                            <tr class="@statusClass" id="row_@i">
+                                <td>
+                                    <strong>@employee.EmployeeName</strong>
+                                    @if (employee.IsOnLeave)
+                                    {
+                                        <span class="badge bg-info ms-2">Leave Approved</span>
+                                    }
+                                    <input type="hidden" name="Employees[@i].EmployeeId" value="@employee.EmployeeId" />
+                                    <input type="hidden" name="Employees[@i].EmployeeName" value="@employee.EmployeeName" />
+                                    <input type="hidden" name="Employees[@i].Designation" value="@employee.Designation" />
+                                </td>
+                                <td>
+                                    @employee.Designation
+                                </td>
+                                <td>
+                                    @if (employee.IsOnLeave)
+                                    {
+                                        <select class="form-select form-select-sm status-dropdown" disabled>
+                                            <option value="LEAVE" selected>LEAVE</option>
+                                        </select>
+                                        <input type="hidden" name="Employees[@i].Status" value="LEAVE" />
+                                    }
+                                    else
+                                    {
+                                        <select class="form-select form-select-sm status-dropdown" 
+                                                name="Employees[@i].Status" 
+                                                id="status_@i"
+                                                onchange="updateRowStyle(@i)">
+                                            @if (employee.Status == "PRESENT")
+                                            {
+                                                <option value="PRESENT" selected>PRESENT</option>
+                                                <option value="ABSENT">ABSENT</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="PRESENT">PRESENT</option>
+                                                <option value="ABSENT" selected>ABSENT</option>
+                                            }
+                                        </select>
+                                    }
+                                </td>
+                                <td>
+                                    <span class="badge @badgeClass" id="badge_@i">@employee.Status</span>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center text-muted">No employees found</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="bi bi-check-circle"></i> Mark Attendance
+                </button>
+                <a href="@Url.Action("Index")" class="btn btn-secondary btn-lg ms-2">
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<style>
+    .table-success {
+        background-color: #d4edda !important;
+    }
+
+    .table-danger {
+        background-color: #f8d7da !important;
+    }
+
+    .table-info {
+        background-color: #d1ecf1 !important;
+    }
+
+    .status-dropdown {
+        cursor: pointer;
+    }
+
+    .form-select-sm {
+        font-size: 0.875rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .badge {
+        font-size: 0.875rem;
+        padding: 0.35rem 0.65rem;
+    }
+</style>
+
+<script>
+    function updateRowStyle(index) {
+        const dropdown = document.getElementById('status_' + index);
+        const row = document.getElementById('row_' + index);
+        const badge = document.getElementById('badge_' + index);
+        const status = dropdown.value;
+
+        // Update row background
+        row.classList.remove('table-success', 'table-danger');
+        if (status === 'PRESENT') {
+            row.classList.add('table-success');
+            badge.className = 'badge bg-success';
+        } else {
+            row.classList.add('table-danger');
+            badge.className = 'badge bg-danger';
+        }
+
+        // Update badge text
+        badge.textContent = status;
+    }
+</script>

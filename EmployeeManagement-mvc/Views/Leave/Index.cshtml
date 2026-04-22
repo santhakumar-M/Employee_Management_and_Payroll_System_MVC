@@ -25,7 +25,7 @@
         @foreach (var r in Model)
         {
             <tr>
-                <td>@r.Employee?.Name</td>
+                <td>@r.EmployeeId - @r.Employee?.Name</td>
                 <td>@r.StartDate</td>
                 <td>@r.EndDate</td>
                 <td>@r.LeaveType</td>

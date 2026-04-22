@@ -52,8 +52,11 @@
                             <span class="badge bg-success me-2">
                                 Present: <span class="fw-bold">@Model.Count(a => a.Status == "PRESENT")</span>
                             </span>
-                            <span class="badge bg-danger">
+                            <span class="badge bg-danger me-2">
                                 Absent: <span class="fw-bold">@Model.Count(a => a.Status == "ABSENT")</span>
+                            </span>
+                            <span class="badge bg-info">
+                                Leave: <span class="fw-bold">@Model.Count(a => a.Status == "LEAVE")</span>
                             </span>
                         </div>
                     </div>
@@ -74,12 +77,14 @@
                 <tbody>
                     @foreach (var employee in Model)
                     {
-                        var statusClass = employee.Status == "PRESENT" ? "table-success" : "table-danger";
-                        var badgeClass = employee.Status == "PRESENT" ? "bg-success" : "bg-danger";
+                        var statusClass = employee.Status == "PRESENT" ? "table-success" 
+                            : employee.Status == "LEAVE" ? "table-info" : "table-danger";
+                        var badgeClass = employee.Status == "PRESENT" ? "bg-success" 
+                            : employee.Status == "LEAVE" ? "bg-info" : "bg-danger";
                         <tr class="@statusClass">
                             <td>
                                 <i class="bi bi-person-circle"></i>
-                                <strong>@employee.EmployeeName</strong>
+                                <strong>@employee.EmployeeId - @employee.EmployeeName</strong>
                             </td>
                             <td>
                                 @employee.Designation
@@ -89,13 +94,17 @@
                             </td>
                             <td class="text-center">
                                 @if (employee.Status == "PRESENT")
-                                {
-                                    <span class="text-success"><i class="bi bi-check-circle-fill"></i></span>
-                                }
-                                else
-                                {
-                                    <span class="text-danger"><i class="bi bi-x-circle-fill"></i></span>
-                                }
+                                    {
+                                        <span class="text-success"><i class="bi bi-check-circle-fill"></i></span>
+                                    }
+                                    else if (employee.Status == "LEAVE")
+                                    {
+                                        <span class="text-info"><i class="bi bi-calendar-check-fill"></i></span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger"><i class="bi bi-x-circle-fill"></i></span>
+                                    }
                             </td>
                         </tr>
                     }

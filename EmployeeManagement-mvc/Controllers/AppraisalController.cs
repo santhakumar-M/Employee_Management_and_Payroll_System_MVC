@@ -30,7 +30,11 @@ namespace EmployeeHrSystem.Controllers
         public async Task<IActionResult> Update()
         {
             var employees = await _employeeService.GetAllEmployeesAsync();
-            ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+            ViewBag.EmployeeItems = employees.Select(e => new SelectListItem
+            {
+                Value = e.Id.ToString(),
+                Text = $"{e.Id} - {e.Name}"
+            }).ToList();
             return View();
         }
 
@@ -42,7 +46,11 @@ namespace EmployeeHrSystem.Controllers
             if (!ModelState.IsValid)
             {
                 var employees = await _employeeService.GetAllEmployeesAsync();
-                ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+                ViewBag.EmployeeItems = employees.Select(e => new SelectListItem
+                {
+                    Value = e.Id.ToString(),
+                    Text = $"{e.Id} - {e.Name}"
+                }).ToList();
                 return View(model);
             }
 
@@ -51,7 +59,11 @@ namespace EmployeeHrSystem.Controllers
             {
                 ModelState.AddModelError("", "Error creating appraisal. Employee may not exist.");
                 var employees = await _employeeService.GetAllEmployeesAsync();
-                ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+                ViewBag.EmployeeItems = employees.Select(e => new SelectListItem
+                {
+                    Value = e.Id.ToString(),
+                    Text = $"{e.Id} - {e.Name}"
+                }).ToList();
                 return View(model);
             }
 

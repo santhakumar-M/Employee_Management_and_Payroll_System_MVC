@@ -68,6 +68,7 @@ namespace EmployeeHrSystem.Services
                 leaveRequest.Status = status;
                 _context.Entry(leaveRequest).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
+
                 return true;
             }
             catch

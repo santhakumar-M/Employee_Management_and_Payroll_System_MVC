@@ -1,0 +1,145 @@
+﻿using EmployeeHrSystem.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace EmployeeHrSystem.Services
+{
+    public class LeaveService : ILeaveService
+    {
+        private readonly ApplicationContext _context;
+
+        public LeaveService(ApplicationContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<List<LeaveRequest>> GetAllLeaveRequestsAsync()
+        {
+            return await _context.LeaveRequests
+                .Include(r => r.Employee)
+                .OrderByDescending(r => r.LeaveId)
+                .ToListAsync();
+        }
+
+        public async Task<LeaveRequest?> GetLeaveRequestByIdAsync(int id)
+        {
+            return await _context.LeaveRequests
+                .Include(r => r.Employee)
+                .FirstOrDefaultAsync(r => r.LeaveId == id);
+        }
+
+        public async Task<List<LeaveRequest>> GetEmployeeLeaveRequestsAsync(int employeeId)
+        {
+            return await _context.LeaveRequests
+                .Include(r => r.Employee)
+                .Where(r => r.EmployeeId == employeeId)
+                .OrderByDescending(r => r.LeaveId)
+                .ToListAsync();
+        }
+
+        public async Task<bool> ApplyLeaveAsync(LeaveRequest leaveRequest)
+        {
+            try
+            {
+                // Validate employee exists
+                if (!await _context.Employees.AnyAsync(e => e.Id == leaveRequest.EmployeeId))
+                    return false;
+
+                // Validate date range
+                if (leaveRequest.EndDate < leaveRequest.StartDate)
+                    return false;
+
+                _context.LeaveRequests.Add(leaveRequest);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateLeaveStatusAsync(int leaveId, string status)
+        {
+            try
+            {
+                var leaveRequest = await _context.LeaveRequests.FindAsync(leaveId);
+                if (leaveRequest == null) return false;
+
+                leaveRequest.Status = status;
+                _context.Entry(leaveRequest).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+
+                // When leave is approved, mark attendance as LEAVE for the date range
+                if (status == "APPROVED")
+                {
+                    await MarkAttendanceAsLeaveAsync(leaveRequest);
+                }
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private async Task MarkAttendanceAsLeaveAsync(LeaveRequest leaveRequest)
+        {
+            var start = leaveRequest.StartDate;
+            var end = leaveRequest.EndDate;
+
+            for (var date = start; date <= end; date = date.AddDays(1))
+            {
+                // Skip weekends
+                if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
+                    continue;
+
+                var existing = await _context.Attendances
+                    .FirstOrDefaultAsync(a => a.EmployeeId == leaveRequest.EmployeeId && a.Date == date);
+
+                if (existing != null)
+                {
+                    existing.Status = "LEAVE";
+                    _context.Entry(existing).State = EntityState.Modified;
+                }
+                else
+                {
+                    _context.Attendances.Add(new Attendance
+                    {
+                        EmployeeId = leaveRequest.EmployeeId,
+                        Date = date,
+                        Status = "LEAVE"
+                    });
+                }
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<bool> DeleteLeaveRequestAsync(int id)
+        {
+            try
+            {
+                var leaveRequest = await _context.LeaveRequests.FindAsync(id);
+                if (leaveRequest == null) return false;
+
+                _context.LeaveRequests.Remove(leaveRequest);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<List<LeaveRequest>> GetLeaveRequestsByStatusAsync(string status)
+        {
+            return await _context.LeaveRequests
+                .Include(r => r.Employee)
+                .Where(r => r.Status == status)
+                .OrderByDescending(r => r.LeaveId)
+                .ToListAsync();
+        }
+    }
+}

@@ -5,7 +5,8 @@ namespace EmployeeHrSystem.Models
         public int EmployeeId { get; set; }
         public string EmployeeName { get; set; } = string.Empty;
         public string? Designation { get; set; }
-        public string Status { get; set; } = "ABSENT"; // PRESENT or ABSENT
+        public string Status { get; set; } = "ABSENT"; // PRESENT, ABSENT, or LEAVE
+        public bool IsOnLeave { get; set; }
     }
 
     public class BulkAttendanceViewModel

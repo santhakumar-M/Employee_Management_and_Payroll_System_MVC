@@ -122,7 +122,12 @@ namespace EmployeeHrSystem.Controllers
         private async Task LoadEmployeesForDropdownAsync(int? selectedId = null)
         {
             var items = await _employeeService.GetAllEmployeesAsync();
-            ViewBag.EmployeeItems = new SelectList(items, "Id", "Name", selectedId);
+            ViewBag.EmployeeItems = items.Select(e => new SelectListItem
+            {
+                Value = e.Id.ToString(),
+                Text = $"{e.Id} - {e.Name}",
+                Selected = selectedId.HasValue && e.Id == selectedId.Value
+            }).ToList();
         }
     }
 }

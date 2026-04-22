@@ -1,0 +1,256 @@
+﻿@using EmployeeHrSystem.Controllers
+@model EmployeeAttendanceReportViewModel
+@{
+    ViewData["Title"] = "Employee Attendance Report";
+    var currentMonth = Model.CurrentMonth;
+    var monthDisplay = DateTime.ParseExact(currentMonth + "-01", "yyyy-MM-dd", null).ToString("MMMM yyyy");
+}
+
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>@Model.Summary?.Employee?.Name - Attendance Report</h2>
+            <p class="text-muted">
+                <strong>Designation:</strong> @Model.Summary?.Employee?.Designation
+                <br />
+                <strong>Period:</strong> @monthDisplay
+            </p>
+        </div>
+        <div class="col-md-4 text-end">
+            <a href="@Url.Action("MonthlyReport")" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to Report
+            </a>
+        </div>
+    </div>
+
+    @if (Model.Summary == null)
+    {
+        <div class="alert alert-warning">
+            <i class="bi bi-exclamation-triangle"></i> No attendance summary found for this employee and month.
+        </div>
+    }
+    else
+    {
+        <!-- Monthly Summary Cards -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <h6 class="card-title text-muted">Days Present</h6>
+                        <h3 class="card-text text-primary">@Model.Summary.DaysPresent</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-info">
+                    <div class="card-body">
+                        <h6 class="card-title text-muted">Working Days</h6>
+                        <h3 class="card-text text-info">@Model.Summary.TotalWorkingDays</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-success">
+                    <div class="card-body">
+                        <h6 class="card-title text-muted">Attendance %</h6>
+                        <h3 class="card-text text-success">@Model.Summary.AttendancePercentage.ToString("F1")%</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-warning">
+                    <div class="card-body">
+                        <h6 class="card-title text-muted">Days Absent</h6>
+                        <h3 class="card-text text-warning">@(Model.Summary.TotalWorkingDays - Model.Summary.DaysPresent)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attendance Status Indicator -->
+        <div class="card mb-4">
+            <div class="card-header bg-light">
+                <h5 class="mb-0">Attendance Status</h5>
+            </div>
+            <div class="card-body">
+                <div class="progress mb-3" style="height: 30px;">
+                    @{
+                        var attendancePercentage = Model.Summary.AttendancePercentage;
+                        var statusClass = attendancePercentage >= 80 ? "success" :
+                                        attendancePercentage >= 70 ? "warning" : "danger";
+                        var statusText = attendancePercentage >= 80 ? "Excellent Attendance" :
+                                       attendancePercentage >= 70 ? "Good Attendance" : "Below Target";
+                    }
+                    <div class="progress-bar bg-@statusClass" role="progressbar" 
+                         style="width: @attendancePercentage%" 
+                         aria-valuenow="@attendancePercentage" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100">
+                        <strong>@attendancePercentage.ToString("F1")%</strong>
+                    </div>
+                </div>
+                <p class="mb-0">
+                    <span class="badge bg-@statusClass">@statusText</span>
+                    @if (attendancePercentage >= 80)
+                    {
+                        <span class="text-success ms-2"><i class="bi bi-check-circle"></i> Meeting expectations</span>
+                    }
+                    else if (attendancePercentage >= 70)
+                    {
+                        <span class="text-warning ms-2"><i class="bi bi-exclamation-circle"></i> Needs improvement</span>
+                    }
+                    else
+                    {
+                        <span class="text-danger ms-2"><i class="bi bi-x-circle"></i> Poor attendance - Action required</span>
+                    }
+                </p>
+            </div>
+        </div>
+
+        <!-- Daily Attendance Records -->
+        <div class="card">
+            <div class="card-header bg-light">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h5 class="mb-0">Daily Attendance Records - @monthDisplay</h5>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <span class="badge bg-success me-2">
+                            <i class="bi bi-check-circle"></i> @Model.AttendanceRecords.Count(x => x.Status == "PRESENT") Present
+                        </span>
+                        <span class="badge bg-danger">
+                            <i class="bi bi-x-circle"></i> @Model.AttendanceRecords.Count(x => x.Status == "ABSENT") Absent
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            @if (Model.AttendanceRecords == null || Model.AttendanceRecords.Count == 0)
+            {
+                <div class="alert alert-info m-4">
+                    <i class="bi bi-info-circle"></i> No attendance records found for this period.
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 20%">Date</th>
+                                <th style="width: 20%">Day of Week</th>
+                                <th style="width: 30%">Status</th>
+                                <th style="width: 30%">Record</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var record in Model.AttendanceRecords.OrderByDescending(x => x.Date))
+                            {
+                                var isPresent = record.Status == "PRESENT";
+                                var statusBadgeClass = isPresent ? "bg-success" : "bg-danger";
+                                var statusIcon = isPresent ? "check-circle" : "x-circle";
+                                var rowClass = isPresent ? "table-success" : "table-danger";
+
+                                <tr class="@rowClass">
+                                    <td>
+                                        <strong>@record.Date.ToString("MMM dd, yyyy")</strong>
+                                    </td>
+                                    <td>
+                                        @record.Date.DayOfWeek.ToString()
+                                    </td>
+                                    <td>
+                                        <span class="badge @statusBadgeClass">
+                                            <i class="bi bi-@statusIcon"></i>
+                                            @record.Status
+                                        </span>
+                                    </td>
+                                    <td>
+                                        @if (isPresent)
+                                        {
+                                            <small class="text-success"><i class="bi bi-check-lg"></i> Marked as present</small>
+                                        }
+                                        else
+                                        {
+                                            <small class="text-danger"><i class="bi bi-dash-lg"></i> Not marked present</small>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+
+            <div class="card-footer bg-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <small class="text-muted">
+                            <strong>Report Generated:</strong> @DateTime.Now.ToString("MMMM dd, yyyy HH:mm")
+                        </small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a href="@Url.Action("MonthlyReport")" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-arrow-left"></i> Back to Monthly Report
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Previous Month Comparison (if available) -->
+        @if (!string.IsNullOrEmpty(Model.Summary.PreviousMonthData))
+        {
+            <div class="card mt-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Previous Month Comparison</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">Data from @DateTime.ParseExact(Model.PreviousMonth + "-01", "yyyy-MM-dd", null).ToString("MMMM yyyy")</p>
+                    <small class="text-muted">
+                        <i class="bi bi-info-circle"></i> Previous month statistics have been archived for reference.
+                        <br />
+                        <em>@Model.Summary.PreviousMonthData</em>
+                    </small>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+<style>
+    .card {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+    }
+
+    .card-header {
+        border-bottom: 1px solid #dee2e6;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .progress {
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    .badge {
+        padding: 0.5em 0.75em;
+        font-size: 0.875rem;
+    }
+</style>

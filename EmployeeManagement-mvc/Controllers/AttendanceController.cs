@@ -9,10 +9,12 @@ namespace EmployeeHrSystem.Controllers
     public class AttendanceController : Controller
     {
         private readonly IAttendanceService _attendanceService;
+        private readonly ILeaveService _leaveService;
 
-        public AttendanceController(IAttendanceService attendanceService)
+        public AttendanceController(IAttendanceService attendanceService, ILeaveService leaveService)
         {
             _attendanceService = attendanceService;
+            _leaveService = leaveService;
         }
 
         // GET: /Attendance - Show list of dates with attendance records
@@ -28,9 +30,11 @@ namespace EmployeeHrSystem.Controllers
             // Get all employees
             var allEmployees = await _attendanceService.GetAllEmployeesForAttendanceAsync();
 
-            // Get attendance for this specific date
+            // Get attendance for this specific date (includes approved leave overlay)
             var attendanceForDate = await _attendanceService.GetAttendanceForDateAsync(date);
-            var attendanceDict = attendanceForDate.ToDictionary(a => a.EmployeeId, a => a.Status);
+            var attendanceDict = attendanceForDate
+                .DistinctBy(a => a.EmployeeId)
+                .ToDictionary(a => a.EmployeeId, a => a.Status);
 
             // Create list of all employees with their attendance status
             var employeesWithStatus = allEmployees.Select(e => new EmployeeAttendanceItem
@@ -38,7 +42,8 @@ namespace EmployeeHrSystem.Controllers
                 EmployeeId = e.Id,
                 EmployeeName = e.Name,
                 Designation = e.Designation,
-                Status = attendanceDict.ContainsKey(e.Id) ? attendanceDict[e.Id] : "ABSENT"
+                Status = attendanceDict.ContainsKey(e.Id) ? attendanceDict[e.Id] : "ABSENT",
+                IsOnLeave = attendanceDict.ContainsKey(e.Id) && attendanceDict[e.Id] == "LEAVE"
             }).OrderBy(x => x.EmployeeName).ToList();
 
             ViewBag.SelectedDate = date;
@@ -131,6 +136,13 @@ namespace EmployeeHrSystem.Controllers
                 .DistinctBy(a => a.EmployeeId)
                 .ToDictionary(a => a.EmployeeId, a => a.Status);
 
+            // Get approved leave requests that cover this date
+            var approvedLeaves = await _leaveService.GetLeaveRequestsByStatusAsync("APPROVED");
+            var employeesOnLeave = approvedLeaves
+                .Where(l => date.Value >= l.StartDate && date.Value <= l.EndDate)
+                .Select(l => l.EmployeeId)
+                .ToHashSet();
+
             // Create ViewModel with all employees and their attendance status
             var viewModel = new BulkAttendanceViewModel
             {
@@ -140,7 +152,10 @@ namespace EmployeeHrSystem.Controllers
                     EmployeeId = e.Id,
                     EmployeeName = e.Name,
                     Designation = e.Designation,
-                    Status = attendanceDict.ContainsKey(e.Id) ? attendanceDict[e.Id] : "ABSENT"
+                    Status = employeesOnLeave.Contains(e.Id)
+                        ? "LEAVE"
+                        : attendanceDict.ContainsKey(e.Id) ? attendanceDict[e.Id] : "ABSENT",
+                    IsOnLeave = employeesOnLeave.Contains(e.Id)
                 }).ToList()
             };
 
@@ -259,7 +274,7 @@ namespace EmployeeHrSystem.Controllers
             var items = employees.Select(e => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
             {
                 Value = e.Id.ToString(),
-                Text = e.Name
+                Text = $"{e.Id} - {e.Name}"
             }).ToList();
             ViewBag.EmployeeItems = items;
         }

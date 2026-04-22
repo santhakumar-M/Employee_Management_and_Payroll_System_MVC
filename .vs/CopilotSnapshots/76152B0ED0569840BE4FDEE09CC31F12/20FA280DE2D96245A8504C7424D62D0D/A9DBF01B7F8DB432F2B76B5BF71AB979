@@ -1,0 +1,73 @@
+﻿using EmployeeHrSystem.Models;
+using EmployeeHrSystem.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace EmployeeHrSystem.Controllers
+{
+    [Authorize(Roles = "Admin,HR Officer,Manager")]
+    public class AppraisalController : Controller
+    {
+        private readonly IAppraisalService _appraisalService;
+        private readonly IEmployeeService _employeeService;
+
+        public AppraisalController(IAppraisalService appraisalService, IEmployeeService employeeService)
+        {
+            _appraisalService = appraisalService;
+            _employeeService = employeeService;
+        }
+
+        // GET: /Appraisal
+        public async Task<IActionResult> Index()
+        {
+            var list = await _appraisalService.GetAllAppraisalsAsync();
+            return View(list);
+        }
+
+        // GET: /Appraisal/Update
+        [HttpGet]
+        public async Task<IActionResult> Update()
+        {
+            var employees = await _employeeService.GetAllEmployeesAsync();
+            ViewBag.EmployeeItems = employees.Select(e => new SelectListItem
+            {
+                Value = e.Id.ToString(),
+                Text = $"{e.Id} - {e.Name}"
+            }).ToList();
+            return View();
+        }
+
+        // POST: /Appraisal/Update
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(Appraisal model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var employees = await _employeeService.GetAllEmployeesAsync();
+                ViewBag.EmployeeItems = employees.Select(e => new SelectListItem
+                {
+                    Value = e.Id.ToString(),
+                    Text = $"{e.Id} - {e.Name}"
+                }).ToList();
+                return View(model);
+            }
+
+            var success = await _appraisalService.CreateAppraisalAsync(model);
+            if (!success)
+            {
+                ModelState.AddModelError("", "Error creating appraisal. Employee may not exist.");
+                var employees = await _employeeService.GetAllEmployeesAsync();
+                ViewBag.EmployeeItems = employees.Select(e => new SelectListItem
+                {
+                    Value = e.Id.ToString(),
+                    Text = $"{e.Id} - {e.Name}"
+                }).ToList();
+                return View(model);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

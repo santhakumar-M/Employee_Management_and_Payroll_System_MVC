@@ -62,12 +62,18 @@
                         @for (int i = 0; i < Model.Employees.Count; i++)
                         {
                             var employee = Model.Employees[i];
-                            var statusClass = employee.Status == "PRESENT" ? "table-success" : "table-danger";
-                            var badgeClass = employee.Status == "PRESENT" ? "bg-success" : "bg-danger";
+                            var statusClass = employee.IsOnLeave ? "table-info" 
+                                : employee.Status == "PRESENT" ? "table-success" : "table-danger";
+                            var badgeClass = employee.IsOnLeave ? "bg-info" 
+                                : employee.Status == "PRESENT" ? "bg-success" : "bg-danger";
 
                             <tr class="@statusClass" id="row_@i">
                                 <td>
-                                    <strong>@employee.EmployeeName</strong>
+                                    <strong>@employee.EmployeeId - @employee.EmployeeName</strong>
+                                    @if (employee.IsOnLeave)
+                                    {
+                                        <span class="badge bg-info ms-2">Leave Approved</span>
+                                    }
                                     <input type="hidden" name="Employees[@i].EmployeeId" value="@employee.EmployeeId" />
                                     <input type="hidden" name="Employees[@i].EmployeeName" value="@employee.EmployeeName" />
                                     <input type="hidden" name="Employees[@i].Designation" value="@employee.Designation" />
@@ -76,21 +82,31 @@
                                     @employee.Designation
                                 </td>
                                 <td>
-                                    <select class="form-select form-select-sm status-dropdown" 
-                                            name="Employees[@i].Status" 
-                                            id="status_@i"
-                                            onchange="updateRowStyle(@i)">
-                                        @if (employee.Status == "PRESENT")
-                                        {
-                                            <option value="PRESENT" selected>PRESENT</option>
-                                            <option value="ABSENT">ABSENT</option>
-                                        }
-                                        else
-                                        {
-                                            <option value="PRESENT">PRESENT</option>
-                                            <option value="ABSENT" selected>ABSENT</option>
-                                        }
-                                    </select>
+                                    @if (employee.IsOnLeave)
+                                    {
+                                        <select class="form-select form-select-sm status-dropdown" disabled>
+                                            <option value="LEAVE" selected>LEAVE</option>
+                                        </select>
+                                        <input type="hidden" name="Employees[@i].Status" value="LEAVE" />
+                                    }
+                                    else
+                                    {
+                                        <select class="form-select form-select-sm status-dropdown" 
+                                                name="Employees[@i].Status" 
+                                                id="status_@i"
+                                                onchange="updateRowStyle(@i)">
+                                            @if (employee.Status == "PRESENT")
+                                            {
+                                                <option value="PRESENT" selected>PRESENT</option>
+                                                <option value="ABSENT">ABSENT</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="PRESENT">PRESENT</option>
+                                                <option value="ABSENT" selected>ABSENT</option>
+                                            }
+                                        </select>
+                                    }
                                 </td>
                                 <td>
                                     <span class="badge @badgeClass" id="badge_@i">@employee.Status</span>
@@ -128,6 +144,10 @@
 
     .table-danger {
         background-color: #f8d7da !important;
+    }
+
+    .table-info {
+        background-color: #d1ecf1 !important;
     }
 
     .status-dropdown {

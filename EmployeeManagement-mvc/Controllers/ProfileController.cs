@@ -67,6 +67,7 @@ namespace EmployeeHrSystem.Controllers
 
             // Explicit absent records (marked ABSENT)
             int explicitAbsent = monthRecords.Count(a => a.Status == "ABSENT");
+            int leaveDays = monthRecords.Count(a => a.Status == "LEAVE");
             // Implied absent days = working days minus present (days without a present record)
             int impliedAbsent = Math.Max(0, totalWorkingDays - present);
 
@@ -82,6 +83,7 @@ namespace EmployeeHrSystem.Controllers
                 Month = month,
                 PresentDays = present,
                 AbsentDays = absent,
+                LeaveDays = leaveDays,
                 Records = monthRecords,
                 Evaluations = evaluations
             };

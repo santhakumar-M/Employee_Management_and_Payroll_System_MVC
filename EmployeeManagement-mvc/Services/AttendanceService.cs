@@ -36,7 +36,21 @@ namespace EmployeeHrSystem.Services
                 if (!await _context.Employees.AnyAsync(e => e.Id == attendance.EmployeeId))
                     return false;
 
-                _context.Attendances.Add(attendance);
+                // Check if a record already exists for this employee on this date
+                var existing = await _context.Attendances
+                    .FirstOrDefaultAsync(a => a.EmployeeId == attendance.EmployeeId && a.Date == attendance.Date);
+
+                if (existing != null)
+                {
+                    // Update existing record instead of creating a duplicate
+                    existing.Status = attendance.Status;
+                    _context.Entry(existing).State = EntityState.Modified;
+                }
+                else
+                {
+                    _context.Attendances.Add(attendance);
+                }
+
                 await _context.SaveChangesAsync();
 
                 // Update monthly attendance summary
@@ -92,11 +106,50 @@ namespace EmployeeHrSystem.Services
 
         public async Task<List<Attendance>> GetEmployeeAttendanceAsync(int employeeId)
         {
-            return await _context.Attendances
+            var records = await _context.Attendances
                 .Include(a => a.Employee)
                 .Where(a => a.EmployeeId == employeeId)
                 .OrderByDescending(a => a.Date)
                 .ToListAsync();
+
+            // Overlay approved leaves onto attendance records
+            var approvedLeaves = await _context.LeaveRequests
+                .Where(l => l.EmployeeId == employeeId && l.Status == "APPROVED")
+                .ToListAsync();
+
+            if (!approvedLeaves.Any())
+                return records;
+
+            var employee = await _context.Employees.FindAsync(employeeId);
+            var recordDict = records.ToDictionary(a => a.Date);
+
+            foreach (var leave in approvedLeaves)
+            {
+                for (var d = leave.StartDate; d <= leave.EndDate; d = d.AddDays(1))
+                {
+                    if (d.DayOfWeek == DayOfWeek.Saturday || d.DayOfWeek == DayOfWeek.Sunday)
+                        continue;
+
+                    if (recordDict.TryGetValue(d, out var existing))
+                    {
+                        existing.Status = "LEAVE";
+                    }
+                    else
+                    {
+                        var leaveRecord = new Attendance
+                        {
+                            EmployeeId = employeeId,
+                            Date = d,
+                            Status = "LEAVE",
+                            Employee = employee
+                        };
+                        records.Add(leaveRecord);
+                        recordDict[d] = leaveRecord;
+                    }
+                }
+            }
+
+            return records.OrderByDescending(a => a.Date).ToList();
         }
 
         // Get distinct dates with attendance records
@@ -130,10 +183,45 @@ namespace EmployeeHrSystem.Services
 
         public async Task<List<Attendance>> GetAttendanceForDateAsync(DateOnly date)
         {
-            return await _context.Attendances
+            var records = await _context.Attendances
                 .Include(a => a.Employee)
                 .Where(a => a.Date == date)
                 .ToListAsync();
+
+            // Overlay approved leaves for this date
+            var approvedLeaves = await _context.LeaveRequests
+                .Where(l => l.Status == "APPROVED" && l.StartDate <= date && l.EndDate >= date)
+                .ToListAsync();
+
+            if (!approvedLeaves.Any())
+                return records;
+
+            var recordDict = records.ToDictionary(a => a.EmployeeId);
+
+            foreach (var leave in approvedLeaves)
+            {
+                if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
+                    continue;
+
+                if (recordDict.TryGetValue(leave.EmployeeId, out var existing))
+                {
+                    existing.Status = "LEAVE";
+                }
+                else
+                {
+                    var employee = await _context.Employees.FindAsync(leave.EmployeeId);
+                    var leaveRecord = new Attendance
+                    {
+                        EmployeeId = leave.EmployeeId,
+                        Date = date,
+                        Status = "LEAVE",
+                        Employee = employee
+                    };
+                    records.Add(leaveRecord);
+                }
+            }
+
+            return records;
         }
 
         public async Task<bool> MarkMultipleAttendanceAsync(DateOnly date, List<int> employeeIds)
@@ -142,18 +230,27 @@ namespace EmployeeHrSystem.Services
             {
                 string currentMonth = date.ToString("yyyy-MM");
 
-                // Remove any existing attendance for this date
+                // Get existing attendance for this date
                 var existingAttendance = await _context.Attendances
                     .Where(a => a.Date == date)
                     .ToListAsync();
 
-                _context.Attendances.RemoveRange(existingAttendance);
+                // Preserve LEAVE records (from approved leave requests)
+                var leaveEmployeeIds = existingAttendance
+                    .Where(a => a.Status == "LEAVE")
+                    .Select(a => a.EmployeeId)
+                    .ToHashSet();
+
+                var nonLeaveRecords = existingAttendance.Where(a => a.Status != "LEAVE").ToList();
+                _context.Attendances.RemoveRange(nonLeaveRecords);
                 await _context.SaveChangesAsync();
 
-                // Add new attendance records for selected employees
+                // Add new attendance records for selected employees, skipping those on leave
                 foreach (var employeeId in employeeIds)
                 {
-                    // Verify employee exists
+                    if (leaveEmployeeIds.Contains(employeeId))
+                        continue;
+
                     if (!await _context.Employees.AnyAsync(e => e.Id == employeeId))
                         continue;
 
@@ -188,7 +285,7 @@ namespace EmployeeHrSystem.Services
         {
             try
             {
-                // Remove any existing attendance for this date (delete all records for this date)
+                // Remove all existing attendance for this date
                 var existingAttendance = await _context.Attendances
                     .Where(a => a.Date == date)
                     .ToListAsync();
@@ -199,7 +296,7 @@ namespace EmployeeHrSystem.Services
                     await _context.SaveChangesAsync();
                 }
 
-                // Add new attendance records for all employees with their selected status
+                // Add new attendance records for all employees with their status (PRESENT, ABSENT, or LEAVE)
                 foreach (var employee in employees)
                 {
                     // Verify employee exists
@@ -210,7 +307,7 @@ namespace EmployeeHrSystem.Services
                     {
                         EmployeeId = employee.EmployeeId,
                         Date = date,
-                        Status = employee.Status // PRESENT or ABSENT
+                        Status = employee.Status // PRESENT, ABSENT, or LEAVE
                     };
 
                     _context.Attendances.Add(attendance);

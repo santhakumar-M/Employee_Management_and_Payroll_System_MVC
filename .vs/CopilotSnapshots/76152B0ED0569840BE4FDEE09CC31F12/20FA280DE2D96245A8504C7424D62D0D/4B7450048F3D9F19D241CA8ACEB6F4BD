@@ -1,0 +1,65 @@
+﻿using EmployeeHrSystem.Models;
+using EmployeeHrSystem.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace EmployeeHrSystem.Controllers
+{
+    [Authorize(Roles = "Admin,Manager")]
+    public class PerformanceController : Controller
+    {
+        private readonly IPerformanceService _performanceService;
+        private readonly IEmployeeService _employeeService;
+
+        public PerformanceController(IPerformanceService performanceService, IEmployeeService employeeService)
+        {
+            _performanceService = performanceService;
+            _employeeService = employeeService;
+        }
+
+        // GET: /Performance
+        public async Task<IActionResult> Index()
+        {
+            var list = await _performanceService.GetAllEvaluationsAsync();
+            return View(list);
+        }
+
+        // GET: /Performance/Record
+        [HttpGet]
+        public async Task<IActionResult> Record()
+        {
+            var employees = await _employeeService.GetAllEmployeesAsync();
+            ViewBag.EmployeeItems = employees.Select(e => new SelectListItem
+            {
+                Value = e.Id.ToString(),
+                Text = $"{e.Id} - {e.Name}"
+            }).ToList();
+            return View();
+        }
+
+        // POST: /Performance/Record
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Record(Evaluation model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var employees = await _employeeService.GetAllEmployeesAsync();
+                ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+                return View(model);
+            }
+
+            var success = await _performanceService.CreateEvaluationAsync(model);
+            if (!success)
+            {
+                ModelState.AddModelError("", "Error creating evaluation. Employee may not exist or score is invalid.");
+                var employees = await _employeeService.GetAllEmployeesAsync();
+                ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+                return View(model);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

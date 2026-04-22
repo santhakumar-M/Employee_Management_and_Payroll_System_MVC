@@ -1,0 +1,117 @@
+﻿@model EmployeeHrSystem.Models.EmployeeAttendanceSummaryViewModel
+
+@{
+    ViewData["Title"] = "My Profile";
+    var monthDisplay = DateTime.ParseExact(Model.Month + "-01", "yyyy-MM-dd", null).ToString("MMMM yyyy");
+    var current = DateTime.ParseExact(Model.Month + "-01", "yyyy-MM-dd", null);
+    var prevMonth = current.AddMonths(-1).ToString("yyyy-MM");
+    var nextMonth = current.AddMonths(1).ToString("yyyy-MM");
+    var totalMarkedDays = Model.Records.Count;
+    var totalWorkingDays = ViewBag.TotalWorkingDays is int tw ? tw : totalMarkedDays;
+    var attendancePercent = totalWorkingDays > 0 ? (decimal)Model.PresentDays * 100m / totalWorkingDays : 0m;
+}
+
+<div class="card card-custom p-3">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h5 class="mb-0">@Model.Employee?.Name</h5>
+            <small class="muted">Designation: @Model.Employee?.Designation</small>
+            <br />
+            <small class="muted">Period: @monthDisplay</small>
+        </div>
+        <div class="d-flex gap-2">
+            <form method="get" class="d-inline">
+                <input type="month" name="month" value="@Model.Month" class="form-control form-control-sm" style="display:inline-block; width:auto;" />
+                <button type="submit" class="btn btn-sm btn-primary ms-2">Go</button>
+            </form>
+            <a asp-controller="Profile" asp-action="Index" asp-route-month="@prevMonth" class="btn btn-sm btn-outline-secondary">&laquo; Prev</a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-month="@nextMonth" class="btn btn-sm btn-outline-secondary">Next &raquo;</a>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <div class="border p-3 text-center">
+                <div class="muted">Present days</div>
+                <div class="h2">@Model.PresentDays</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="border p-3 text-center">
+                <div class="muted">Absent days</div>
+                <div class="h2">@Model.AbsentDays</div>
+                @if (ViewBag.TotalWorkingDays != null)
+                {
+                    <div class="text-muted small mt-1">Working days: @ViewBag.TotalWorkingDays</div>
+                    @if (ViewBag.ImpliedAbsent != null)
+                    {
+                        <div class="text-muted small">(Implied absent: @ViewBag.ImpliedAbsent)</div>
+                    }
+                }
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="border p-3 text-center">
+                <div class="muted">Leave days</div>
+                <div class="h2">@Model.LeaveDays</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="border p-3 text-center">
+                <div class="muted">Attendance %</div>
+                <div class="h2">@attendancePercent.ToString("F1")%</div>
+            </div>
+        </div>
+    </div>
+
+    <h6>Detailed records</h6>
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <thead>
+                <tr><th>Date</th><th>Day</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var r in Model.Records.OrderByDescending(x => x.Date))
+                {
+                    <tr>
+                        <td>@r.Date.ToString("yyyy-MM-dd")</td>
+                        <td>@r.Date.DayOfWeek</td>
+                        <td>
+                            @if (r.Status == "PRESENT")
+                            {
+                                <span class="badge bg-success">Present</span>
+                            }
+                            else if (r.Status == "LEAVE")
+                            {
+                                <span class="badge bg-info">Leave</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">Absent</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <h6 class="mt-4">Performance feedback</h6>
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <thead>
+                <tr><th>Date</th><th>Score</th><th>Remarks</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var ev in Model.Evaluations.OrderByDescending(e => e.EvaluationDate))
+                {
+                    <tr>
+                        <td>@ev.EvaluationDate.ToString("yyyy-MM-dd")</td>
+                        <td>@ev.Score</td>
+                        <td>@ev.Remarks</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

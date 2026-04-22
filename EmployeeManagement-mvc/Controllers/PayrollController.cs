@@ -26,7 +26,11 @@ namespace EmployeeHrSystem.Controllers
         public async Task<IActionResult> Index()
         {
             var employees = await _employeeService.GetAllEmployeesAsync();
-            ViewBag.EmployeeItems = new SelectList(employees, "Id", "Name");
+            ViewBag.EmployeeItems = employees.Select(e => new SelectListItem
+            {
+                Value = e.Id.ToString(),
+                Text = $"{e.Id} - {e.Name}"
+            }).ToList();
 
             var list = await _payrollService.GetAllPayrollsAsync();
 
