@@ -133,7 +133,8 @@ namespace EmployeeManagement_mvc.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ContactInfo")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<int?>("DepartmentId")
                         .HasColumnType("int");
@@ -169,7 +170,8 @@ namespace EmployeeManagement_mvc.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("Remarks")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<decimal>("Score")
                         .HasColumnType("decimal(18,2)");

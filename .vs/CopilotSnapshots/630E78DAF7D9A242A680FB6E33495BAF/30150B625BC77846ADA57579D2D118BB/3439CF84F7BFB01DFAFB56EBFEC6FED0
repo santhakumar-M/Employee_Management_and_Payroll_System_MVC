@@ -1,0 +1,287 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using EmployeeHrSystem.Controllers;
+using EmployeeHrSystem.Models;
+using EmployeeHrSystem.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using NUnit.Framework;
+
+namespace EmployeeManagement.mvc.Tests
+{
+    // Lightweight fake implementations of services used by controllers
+    internal class FakeAccountService : IAccountService
+    {
+        public Task<AppUser?> AuthenticateAsync(string username, string password, string role)
+        {
+            if (username == "valid" && password == "pass" && !string.IsNullOrWhiteSpace(role))
+                return Task.FromResult<AppUser?>(new AppUser { Username = username, Role = role, EmployeeId = 1 });
+            return Task.FromResult<AppUser?>(null);
+        }
+
+        public Task<bool> CreateUserAsync(AppUser user, string password) => Task.FromResult(true);
+    }
+
+    internal class FakeEmployeeService : IEmployeeService
+    {
+        public Task<List<Employee>> GetAllEmployeesAsync() => Task.FromResult(new List<Employee> { new Employee { Id = 1, Name = "John" } });
+        public Task<Employee?> GetEmployeeByIdAsync(int id) => Task.FromResult(id == 1 ? new Employee { Id = 1, Name = "John" } : null as Employee);
+        public Task<bool> CreateEmployeeAsync(Employee employee) => Task.FromResult(true);
+        public Task<bool> UpdateEmployeeAsync(Employee employee) => Task.FromResult(true);
+        public Task<bool> DeleteEmployeeAsync(int id) => Task.FromResult(id == 1);
+    }
+
+    internal class FakeDepartmentService : IDepartmentService
+    {
+        public Task<List<Department>> GetAllDepartmentsAsync() => Task.FromResult(new List<Department>());
+        public Task<bool> CreateDepartmentAsync(Department dept) => Task.FromResult(true);
+    }
+
+    internal class FakeAttendanceService : IAttendanceService
+    {
+        public Task<List<Attendance>> GetEmployeeAttendanceAsync(int employeeId)
+            => Task.FromResult(new List<Attendance> { new Attendance { Date = DateTime.Today, Status = "PRESENT" } });
+
+        public Task<MonthlyAttendanceSummary?> GetMonthlyAttendanceSummaryAsync(int employeeId, string month)
+            => Task.FromResult<MonthlyAttendanceSummary?>(null);
+    }
+
+    internal class FakeLeaveService : ILeaveService
+    {
+        public Task<List<LeaveRequest>> GetAllLeaveRequestsAsync() => Task.FromResult(new List<LeaveRequest>());
+        public Task<List<LeaveRequest>> GetEmployeeLeaveRequestsAsync(int employeeId) => Task.FromResult(new List<LeaveRequest>());
+        public Task<bool> ApplyLeaveAsync(LeaveRequest r) => Task.FromResult(true);
+        public Task<bool> UpdateLeaveStatusAsync(int id, string status) => Task.FromResult(true);
+    }
+
+    internal class FakePayrollService : IPayrollService
+    {
+        public Task<List<Payroll>> GetAllPayrollsAsync() => Task.FromResult(new List<Payroll>());
+        public Task<bool> ProcessPayrollAsync(Payroll p, bool applyLeaveDeduction, decimal perDay) => Task.FromResult(true);
+    }
+
+    internal class FakePerformanceService : IPerformanceService
+    {
+        public Task<List<Evaluation>> GetAllEvaluationsAsync() => Task.FromResult(new List<Evaluation>());
+        public Task<bool> CreateEvaluationAsync(Evaluation e) => Task.FromResult(true);
+        public Task<List<Evaluation>> GetEmployeeEvaluationsAsync(int employeeId) => Task.FromResult(new List<Evaluation>());
+    }
+
+    internal class FakeAppraisalService : IAppraisalService
+    {
+        public Task<List<Appraisal>> GetAllAppraisalsAsync() => Task.FromResult(new List<Appraisal>());
+        public Task<bool> CreateAppraisalAsync(Appraisal a) => Task.FromResult(true);
+    }
+
+    internal class FakeReportService : IReportService
+    {
+        public Task<List<HRReport>> GetAllReportsAsync() => Task.FromResult(new List<HRReport>());
+        public Task<HRReport?> GetReportByIdAsync(int id) => Task.FromResult<HRReport?>(null);
+        public Task<bool> CreateReportAsync(HRReport report) => Task.FromResult(true);
+        public Task<bool> UpdateReportAsync(HRReport report) => Task.FromResult(true);
+        public Task<bool> DeleteReportAsync(int id) => Task.FromResult(true);
+        public Task<HRReportViewModel> GenerateMonthlyReportAsync(DateOnly reportDate)
+        {
+            var vm = new HRReportViewModel
+            {
+                ReportingPeriod = reportDate.ToString("MMMM yyyy"),
+                DepartmentBreakdown = new List<(string DepartmentName, int EmployeeCount, decimal PayrollCost)> { ("HR", 1, 1000m) }
+            };
+            return Task.FromResult(vm);
+        }
+    }
+
+    internal class FakeDashboardService : IDashboardService
+    {
+        public Task<int> GetTotalEmployeesAsync() => Task.FromResult(10);
+        public Task<int> GetTotalDepartmentsAsync() => Task.FromResult(1);
+        public Task<decimal> GetAverageAttendanceAsync() => Task.FromResult(95m);
+        public Task<int> GetPendingLeaveRequestsAsync() => Task.FromResult(0);
+        public Task<decimal> GetTotalPayrollAmountAsync(string month) => Task.FromResult(10000m);
+    }
+
+    internal class FakeAuthenticationService : IAuthenticationService
+    {
+        public Task<AuthenticateResult> AuthenticateAsync(HttpContext context, string scheme) => Task.FromResult(AuthenticateResult.NoResult());
+        public Task ChallengeAsync(HttpContext context, string scheme, AuthenticationProperties properties) => Task.CompletedTask;
+        public Task ForbidAsync(HttpContext context, string scheme, AuthenticationProperties properties) => Task.CompletedTask;
+        public Task SignInAsync(HttpContext context, string scheme, ClaimsPrincipal principal, AuthenticationProperties properties) => Task.CompletedTask;
+        public Task SignOutAsync(HttpContext context, string scheme, AuthenticationProperties properties) => Task.CompletedTask;
+    }
+
+    [TestFixture]
+    public class ControllerTests
+    {
+        private IServiceProvider BuildServices()
+        {
+            return new SimpleServiceProvider();
+        }
+
+        private class SimpleServiceProvider : IServiceProvider
+        {
+            public object? GetService(Type serviceType)
+            {
+                if (serviceType == typeof(IAuthenticationService)) return new FakeAuthenticationService();
+                if (serviceType == typeof(IAttendanceService)) return new FakeAttendanceService();
+                return null;
+            }
+        }
+
+        private ControllerContext CreateContext(ClaimsPrincipal? user = null)
+        {
+            var ctx = new DefaultHttpContext();
+            ctx.RequestServices = BuildServices();
+            if (user != null) ctx.User = user;
+            return new ControllerContext { HttpContext = ctx };
+        }
+
+        [Test]
+        public async Task Employee_Index_ReturnsViewWithList()
+        {
+            var ctrl = new EmployeeController(new FakeEmployeeService(), new FakeDepartmentService(), new FakeAccountService())
+            {
+                ControllerContext = CreateContext()
+            };
+
+            var result = await ctrl.Index();
+            Assert.IsInstanceOf<ViewResult>(result);
+            var view = result as ViewResult;
+            Assert.IsInstanceOf<List<Employee>>(view?.Model);
+        }
+
+        [Test]
+        public async Task Employee_Attendance_NonExisting_ReturnsNotFound()
+        {
+            var ctrl = new EmployeeController(new FakeEmployeeService(), new FakeDepartmentService(), new FakeAccountService())
+            {
+                ControllerContext = CreateContext()
+            };
+
+            var result = await ctrl.Attendance(99, null);
+            Assert.IsInstanceOf<NotFoundResult>(result);
+        }
+
+        [Test]
+        public void Home_Index_ReturnsView()
+        {
+            var ctrl = new HomeController();
+            var result = ctrl.Index();
+            Assert.IsInstanceOf<ViewResult>(result);
+        }
+
+        [Test]
+        public async Task Account_Login_Post_Invalid_ReturnsView()
+        {
+            var ctrl = new AccountController(new FakeAccountService())
+            {
+                ControllerContext = CreateContext()
+            };
+
+            var result = await ctrl.Login("", "", "");
+            Assert.IsInstanceOf<ViewResult>(result);
+        }
+
+        [Test]
+        public async Task Account_Login_Post_Valid_Redirects()
+        {
+            var ctrl = new AccountController(new FakeAccountService())
+            {
+                ControllerContext = CreateContext()
+            };
+
+            var result = await ctrl.Login("valid", "pass", "Employee");
+            Assert.IsInstanceOf<RedirectToActionResult>(result);
+        }
+
+        [Test]
+        public async Task Report_ExportCsv_ReturnsFile()
+        {
+            var ctrl = new ReportController(new FakeReportService(), new FakeDashboardService())
+            {
+                ControllerContext = CreateContext()
+            };
+
+            var result = await ctrl.ExportCsv(null, null);
+            Assert.IsInstanceOf<FileContentResult>(result);
+            var file = result as FileContentResult;
+            Assert.AreEqual("text/csv", file?.ContentType);
+            Assert.IsNotEmpty(file?.FileContents);
+        }
+
+        [Test]
+        public async Task Leave_Index_ForEmployee_ReturnsView()
+        {
+            var claims = new[] { new Claim(ClaimTypes.Role, "Employee"), new Claim("EmployeeId", "1") };
+            var user = new ClaimsPrincipal(new ClaimsIdentity(claims));
+
+            var ctrl = new LeaveController(new FakeLeaveService(), new FakeEmployeeService())
+            {
+                ControllerContext = CreateContext(user)
+            };
+
+            var result = await ctrl.Index();
+            Assert.IsInstanceOf<ViewResult>(result);
+        }
+
+        [Test]
+        public async Task Payroll_Index_ReturnsViewAndSetsViewBag()
+        {
+            var ctrl = new PayrollController(new FakePayrollService(), new FakeEmployeeService(), new FakeAttendanceService())
+            {
+                ControllerContext = CreateContext()
+            };
+
+            var result = await ctrl.Index();
+            Assert.IsInstanceOf<ViewResult>(result);
+            Assert.IsNotNull(ctrl.ViewBag.EmployeeItems);
+            Assert.IsNotNull(ctrl.ViewBag.PayrollDetails);
+        }
+
+        [Test]
+        public async Task Performance_Record_Get_ReturnsView()
+        {
+            var ctrl = new PerformanceController(new FakePerformanceService(), new FakeEmployeeService())
+            {
+                ControllerContext = CreateContext()
+            };
+
+            var result = await ctrl.Record();
+            Assert.IsInstanceOf<ViewResult>(result);
+        }
+
+        [Test]
+        public async Task Appraisal_Update_Get_ReturnsView()
+        {
+            var ctrl = new AppraisalController(new FakeAppraisalService(), new FakeEmployeeService())
+            {
+                ControllerContext = CreateContext()
+            };
+
+            var result = await ctrl.Update();
+            Assert.IsInstanceOf<ViewResult>(result);
+        }
+
+        [Test]
+        public async Task Dashboard_Admin_ReturnsView()
+        {
+            var ctrl = new DashboardController(new FakeDashboardService())
+            {
+                ControllerContext = CreateContext()
+            };
+
+            var result = await ctrl.Admin();
+            Assert.IsInstanceOf<ViewResult>(result);
+        }
+
+        [Test]
+        public void Error_HttpStatusCodeHandler_404_ReturnsNotFoundView()
+        {
+            var ctrl = new ErrorController();
+            var result = ctrl.HttpStatusCodeHandler(404);
+            Assert.IsInstanceOf<ViewResult>(result);
+        }
+    }
+}
